@@ -1,0 +1,6 @@
+/tmp
+.DS_Store
+database.yml
+.idea
+public/galleries/
+public/assets/
