@@ -4,3 +4,4 @@ database.yml
 .idea
 public/galleries/
 public/assets/
+.sass-cache

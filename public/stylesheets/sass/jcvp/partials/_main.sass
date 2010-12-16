@@ -1,7 +1,58 @@
 div#main
   +container
 
-div#top
+div#helpNavigation
   +column(24)
   +backgroundcolor_grey
   :height 21px
+
+div#mainNavigation
+  +column(24)
+  :margin-top 60px
+
+div#mainNavigationImage
+  +column(24)
+
+div#mainNavigationBar
+  +column(24)
+  :margin-top -298px
+  div#mainNavigationBarItems
+    +column(20)
+    +backgroundcolor_grey
+    :opacity 0.8
+    :margin-top 66px
+    :margin-right 0
+    :height = $mainNavigationBarHeight
+    ul
+      +horizontal-list
+      li
+        :margin-right 20px
+        :width 120px
+        :padding-left 0
+        :padding-right 0
+        :text-align center
+        a
+          :color white
+          :font bold 16px arial,arial
+          :height = $mainNavigationBarHeight - 6
+          :display block
+          :padding-top 6px
+        ul
+          :display none
+      li:hover
+        +jcvp-backgroundcolor
+        ul
+          :display block
+          :position absolute
+          li
+            :background-color black
+            :width 120px
+            :padding-left 0
+            :padding-right 0
+            :text-align center
+          li:hover
+            +jcvp-backgroundcolor
+
+  div#mainNavigationBarLogo
+    +column(4)
+    +last

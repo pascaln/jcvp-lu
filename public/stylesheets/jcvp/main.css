@@ -549,6 +549,12 @@ body {
   background-color: white;
 }
 
+/* line 4, ../sass/jcvp/partials/_tags.sass */
+a:link, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
 /* line 1, ../sass/jcvp/partials/_main.sass */
 div#main {
   width: 950px;
@@ -558,7 +564,7 @@ div#main {
 }
 
 /* line 4, ../sass/jcvp/partials/_main.sass */
-div#top {
+div#helpNavigation {
   display: inline;
   float: left;
   margin-right: 10px;
@@ -567,6 +573,141 @@ div#top {
   height: 21px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html div#top {
+* html div#helpNavigation {
+  overflow-x: hidden;
+}
+
+/* line 9, ../sass/jcvp/partials/_main.sass */
+div#mainNavigation {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  margin-top: 60px;
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#mainNavigation {
+  overflow-x: hidden;
+}
+
+/* line 13, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationImage {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#mainNavigationImage {
+  overflow-x: hidden;
+}
+
+/* line 16, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  margin-top: -298px;
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#mainNavigationBar {
+  overflow-x: hidden;
+}
+/* line 19, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar div#mainNavigationBarItems {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 790px;
+  background-color: #707070;
+  opacity: 0.8;
+  margin-top: 66px;
+  margin-right: 0;
+  height: 30px;
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#mainNavigationBar div#mainNavigationBarItems {
+  overflow-x: hidden;
+}
+/* line 26, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar div#mainNavigationBarItems ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 56, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+div#mainNavigationBar div#mainNavigationBarItems ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 45, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+div#mainNavigationBar div#mainNavigationBarItems ul li:first-child, div#mainNavigationBar div#mainNavigationBarItems ul li.first {
+  padding-left: 0;
+}
+/* line 46, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+div#mainNavigationBar div#mainNavigationBarItems ul li:last-child, div#mainNavigationBar div#mainNavigationBarItems ul li.last {
+  padding-right: 0;
+}
+/* line 28, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar div#mainNavigationBarItems ul li {
+  margin-right: 20px;
+  width: 120px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+/* line 34, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar div#mainNavigationBarItems ul li a {
+  color: white;
+  font: bold 16px arial, arial;
+  height: 24px;
+  display: block;
+  padding-top: 6px;
+}
+/* line 40, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar div#mainNavigationBarItems ul li ul {
+  display: none;
+}
+/* line 42, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar div#mainNavigationBarItems ul li:hover {
+  background-color: #f07d08;
+}
+/* line 44, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar div#mainNavigationBarItems ul li:hover ul {
+  display: block;
+  position: absolute;
+}
+/* line 47, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar div#mainNavigationBarItems ul li:hover ul li {
+  background-color: black;
+  width: 120px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+/* line 53, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar div#mainNavigationBarItems ul li:hover ul li:hover {
+  background-color: #f07d08;
+}
+/* line 56, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar div#mainNavigationBarLogo {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+  margin-right: 0;
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#mainNavigationBar div#mainNavigationBarLogo {
   overflow-x: hidden;
 }
