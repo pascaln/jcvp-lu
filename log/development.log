@@ -38434,3 +38434,3577 @@ Cache read: Radiant::Config
   [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW TABLES[0m
   [4;35;1mPage Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
   [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (83.3ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (170.6ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRadiantTables (1)
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (90.8ms)[0m   [0;1mCREATE TABLE `config` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `key` varchar(40) DEFAULT '' NOT NULL, `value` varchar(255) DEFAULT '') ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `config`[0m
+  [4;36;1mSQL (109.6ms)[0m   [0;1mCREATE UNIQUE INDEX `key` ON `config` (`key`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (106.0ms)[0m   [0;1mCREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `slug` varchar(100), `breadcrumb` varchar(160), `behavior` varchar(25), `status_id` int(11) DEFAULT 1 NOT NULL, `parent_id` int(11), `layout_id` int(11), `created_at` datetime, `updated_at` datetime, `published_at` datetime, `created_by` int(11), `updated_by` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (106.6ms)[0m   [0;1mCREATE TABLE `page_parts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(100), `filter` varchar(25), `content` text, `page_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (82.3ms)[0m   [0;1mCREATE TABLE `snippets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(100) DEFAULT '' NOT NULL, `filter` varchar(25), `content` text, `created_at` datetime, `updated_at` datetime, `created_by` int(11), `updated_by` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `snippets`[0m
+  [4;36;1mSQL (93.6ms)[0m   [0;1mCREATE UNIQUE INDEX `name` ON `snippets` (`name`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (105.1ms)[0m   [0;1mCREATE TABLE `layouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(100), `content` text, `created_at` datetime, `updated_at` datetime, `created_by` int(11), `updated_by` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (90.6ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(100), `email` varchar(255), `login` varchar(40) DEFAULT '' NOT NULL, `password` varchar(40), `admin` tinyint DEFAULT 0 NOT NULL, `developer` tinyint DEFAULT 0 NOT NULL, `created_at` datetime, `updated_at` datetime, `created_by` int(11), `updated_by` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (93.6ms)[0m   [0;1mCREATE UNIQUE INDEX `login` ON `users` (`login`)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to InsertInitialData (2)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+Migrating to RenameBehaviorColumn (3)
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW COLUMNS FROM `pages` LIKE 'behavior'[0m
+  [4;35;1mSQL (89.5ms)[0m   [0mALTER TABLE `pages` CHANGE `behavior` `behavior_id` varchar(25) DEFAULT NULL[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('3')[0m
+Migrating to RenameFilterColumn (4)
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `page_parts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW COLUMNS FROM `page_parts` LIKE 'filter'[0m
+  [4;35;1mSQL (54.5ms)[0m   [0mALTER TABLE `page_parts` CHANGE `filter` `filter_id` varchar(25) DEFAULT NULL[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW COLUMNS FROM `snippets` LIKE 'filter'[0m
+  [4;36;1mSQL (97.8ms)[0m   [0;1mALTER TABLE `snippets` CHANGE `filter` `filter_id` varchar(25) DEFAULT NULL[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('4')[0m
+Migrating to AddVirtualColumnToPage (5)
+  [4;36;1mSQL (115.0ms)[0m   [0;1mALTER TABLE `pages` ADD `virtual` tinyint(1) DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('5')[0m
+Migrating to IntegerColumnsToBoolean (6)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` ORDER BY name[0m
+  [4;35;1mSQL (81.1ms)[0m   [0mALTER TABLE `users` DROP `admin`[0m
+  [4;36;1mSQL (114.9ms)[0m   [0;1mALTER TABLE `users` ADD `admin` tinyint(1) DEFAULT 0 NOT NULL[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` ORDER BY name[0m
+  [4;36;1mSQL (114.5ms)[0m   [0;1mALTER TABLE `users` DROP `developer`[0m
+  [4;35;1mSQL (102.4ms)[0m   [0mALTER TABLE `users` ADD `developer` tinyint(1) DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('6')[0m
+Migrating to RemoveVirtualColumnFromPage (7)
+  [4;35;1mSQL (119.0ms)[0m   [0mALTER TABLE `pages` DROP `virtual`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('7')[0m
+Migrating to AddVirtualColumnToPageAgain (8)
+  [4;35;1mSQL (122.6ms)[0m   [0mALTER TABLE `pages` ADD `virtual` tinyint(1) DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('8')[0m
+Migrating to AddContentTypeFieldToLayout (9)
+  [4;35;1mSQL (110.5ms)[0m   [0mALTER TABLE `layouts` ADD `content_type` varchar(40)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('9')[0m
+Migrating to MergeBehaviorsAndPages (10)
+  [4;35;1mMergeBehaviorsAndPages::OldPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW COLUMNS FROM `pages` LIKE 'behavior_id'[0m
+  [4;36;1mSQL (102.1ms)[0m   [0;1mALTER TABLE `pages` CHANGE `behavior_id` `type` varchar(25) DEFAULT NULL[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('10')[0m
+Migrating to RenameTypeColumnOnPageToClassName (11)
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW COLUMNS FROM `pages` LIKE 'type'[0m
+  [4;36;1mSQL (103.7ms)[0m   [0;1mALTER TABLE `pages` CHANGE `type` `class_name` varchar(25) DEFAULT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('11')[0m
+Migrating to CreateExtensionMeta (12)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (97.9ms)[0m   [0mCREATE TABLE `extension_meta` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `schema_version` int(11) DEFAULT 0, `enabled` tinyint(1) DEFAULT 1) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('12')[0m
+Migrating to AddNotesFieldToUser (13)
+  [4;35;1mSQL (99.8ms)[0m   [0mALTER TABLE `users` ADD `notes` text[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('13')[0m
+Migrating to RenameConfigDefaultPartsKey (14)
+  [4;35;1mRadiant::Config Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'default.parts') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('14')[0m
+Migrating to AddOptimisticLocking (15)
+  [4;36;1mSQL (117.0ms)[0m   [0;1mALTER TABLE `pages` ADD `lock_version` int(11) DEFAULT 0[0m
+  [4;35;1mSQL (110.2ms)[0m   [0mALTER TABLE `layouts` ADD `lock_version` int(11) DEFAULT 0[0m
+  [4;36;1mSQL (121.6ms)[0m   [0;1mALTER TABLE `snippets` ADD `lock_version` int(11) DEFAULT 0[0m
+  [4;35;1mSQL (94.7ms)[0m   [0mALTER TABLE `users` ADD `lock_version` int(11) DEFAULT 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('15')[0m
+Migrating to AddSessions (16)
+  [4;35;1mSQL (96.3ms)[0m   [0mCREATE TABLE `sessions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `session_id` varchar(255), `data` text, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (109.0ms)[0m   [0mCREATE INDEX `index_sessions_on_session_id` ON `sessions` (`session_id`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (119.8ms)[0m   [0mCREATE INDEX `index_sessions_on_updated_at` ON `sessions` (`updated_at`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('16')[0m
+Migrating to RenameCreatedByUpdatedByColumns (17)
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW COLUMNS FROM `pages` LIKE 'created_by'[0m
+  [4;35;1mSQL (98.8ms)[0m   [0mALTER TABLE `pages` CHANGE `created_by` `created_by_id` int(11) DEFAULT NULL[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW COLUMNS FROM `pages` LIKE 'updated_by'[0m
+  [4;36;1mSQL (89.1ms)[0m   [0;1mALTER TABLE `pages` CHANGE `updated_by` `updated_by_id` int(11) DEFAULT NULL[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `snippets`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW COLUMNS FROM `snippets` LIKE 'created_by'[0m
+  [4;35;1mSQL (90.3ms)[0m   [0mALTER TABLE `snippets` CHANGE `created_by` `created_by_id` int(11) DEFAULT NULL[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW COLUMNS FROM `snippets` LIKE 'updated_by'[0m
+  [4;36;1mSQL (89.5ms)[0m   [0;1mALTER TABLE `snippets` CHANGE `updated_by` `updated_by_id` int(11) DEFAULT NULL[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `layouts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW COLUMNS FROM `layouts` LIKE 'created_by'[0m
+  [4;35;1mSQL (89.7ms)[0m   [0mALTER TABLE `layouts` CHANGE `created_by` `created_by_id` int(11) DEFAULT NULL[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `layouts`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW COLUMNS FROM `layouts` LIKE 'updated_by'[0m
+  [4;36;1mSQL (89.7ms)[0m   [0;1mALTER TABLE `layouts` CHANGE `updated_by` `updated_by_id` int(11) DEFAULT NULL[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW COLUMNS FROM `users` LIKE 'created_by'[0m
+  [4;35;1mSQL (89.0ms)[0m   [0mALTER TABLE `users` CHANGE `created_by` `created_by_id` int(11) DEFAULT NULL[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW COLUMNS FROM `users` LIKE 'updated_by'[0m
+  [4;36;1mSQL (89.5ms)[0m   [0;1mALTER TABLE `users` CHANGE `updated_by` `updated_by_id` int(11) DEFAULT NULL[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('17')[0m
+Migrating to AddDescriptionAndKeywordsToPages (18)
+  [4;36;1mSQL (107.8ms)[0m   [0;1mALTER TABLE `pages` ADD `description` varchar(255)[0m
+  [4;35;1mSQL (126.3ms)[0m   [0mALTER TABLE `pages` ADD `keywords` varchar(255)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('18')[0m
+Migrating to AddSaltToUsers (19)
+  [4;35;1mSQL (114.0ms)[0m   [0mALTER TABLE `users` ADD `salt` varchar(255)[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `salt` = 'sweet harmonious biscuits' [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('19')[0m
+Migrating to AddSessionInfoToUsers (20)
+  [4;36;1mSQL (114.4ms)[0m   [0;1mALTER TABLE `users` ADD `session_token` varchar(255)[0m
+  [4;35;1mSQL (115.6ms)[0m   [0mALTER TABLE `users` ADD `session_expire` datetime[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20')[0m
+Migrating to RemoveSessionExpireFromUsers (21)
+  [4;35;1mSQL (105.3ms)[0m   [0mALTER TABLE `users` DROP `session_expire`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('21')[0m
+Migrating to AddIndexes (20081203140407)
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (112.9ms)[0m   [0;1mCREATE INDEX `pages_class_name` ON `pages` (`class_name`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (116.5ms)[0m   [0;1mCREATE INDEX `pages_parent_id` ON `pages` (`parent_id`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (114.6ms)[0m   [0;1mCREATE INDEX `pages_child_slug` ON `pages` (`slug`, `parent_id`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (116.0ms)[0m   [0;1mCREATE INDEX `pages_published` ON `pages` (`virtual`, `status_id`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `page_parts`[0m
+  [4;36;1mSQL (114.9ms)[0m   [0;1mCREATE INDEX `parts_by_page` ON `page_parts` (`page_id`, `name`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081203140407')[0m
+Migrating to AddUserLanguage (20090226140109)
+  [4;36;1mSQL (102.6ms)[0m   [0;1mALTER TABLE `users` ADD `language` varchar(255)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090226140109')[0m
+Migrating to RenameDeveloperRoleToDesigner (20090929164633)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW COLUMNS FROM `users` LIKE 'developer'[0m
+  [4;36;1mSQL (110.9ms)[0m   [0;1mALTER TABLE `users` CHANGE `developer` `designer` tinyint(1) DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090929164633')[0m
+Migrating to ChangeUserLanguageToLocale (20091003095744)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW COLUMNS FROM `users` LIKE 'language'[0m
+  [4;36;1mSQL (112.3ms)[0m   [0;1mALTER TABLE `users` CHANGE `language` `locale` varchar(255) DEFAULT NULL[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091003095744')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `config`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `config`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `extension_meta`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `extension_meta`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `extension_meta`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `layouts`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `layouts`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `layouts`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `page_parts`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `page_parts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `page_parts`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `snippets`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `snippets`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `snippets`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `config`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `config`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `config`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `extension_meta`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `extension_meta`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `extension_meta`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `layouts`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `layouts`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `layouts`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `page_parts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `page_parts`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `page_parts`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `snippets`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `snippets`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `config`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `config`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `extension_meta`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `extension_meta`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `extension_meta`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `layouts`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `layouts`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `layouts`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `page_parts`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `page_parts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `page_parts`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `snippets`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `snippets`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `snippets`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `config`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `config`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `config`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `extension_meta`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `extension_meta`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `extension_meta`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `layouts`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mdescribe `layouts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `layouts`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `page_parts`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `page_parts`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `page_parts`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `snippets`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `snippets`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'admin') ORDER BY name LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'admin') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO `users` (`name`, `updated_by_id`, `salt`, `session_token`, `created_at`, `updated_at`, `created_by_id`, `notes`, `admin`, `designer`, `lock_version`, `locale`, `login`, `password`, `email`) VALUES('Pascal Naef', NULL, '4dac0b8542710a62dea46011b8ca79128b1704c4', NULL, '2010-12-27 23:11:51', '2010-12-27 23:11:51', NULL, NULL, 1, 0, 0, NULL, 'admin', '54a62b80da160000d5df751c42f6293bb11352e4', NULL)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'admin.title') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Create (0.1ms)[0m   [0mINSERT INTO `config` (`value`, `key`) VALUES('Radiant CMS', 'admin.title')[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'admin.subtitle') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Create (0.1ms)[0m   [0mINSERT INTO `config` (`value`, `key`) VALUES('Publishing for Small Teams', 'admin.subtitle')[0m
+  [4;36;1mRadiant::Config Load (0.2ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'defaults.page.parts') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Create (0.1ms)[0m   [0mINSERT INTO `config` (`value`, `key`) VALUES('body, extended', 'defaults.page.parts')[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (5.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'defaults.page.status') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Create (0.1ms)[0m   [0mINSERT INTO `config` (`value`, `key`) VALUES('draft', 'defaults.page.status')[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'defaults.page.filter') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Create (0.1ms)[0m   [0mINSERT INTO `config` (`value`, `key`) VALUES('', 'defaults.page.filter')[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (2.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'session_timeout') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Create (0.1ms)[0m   [0mINSERT INTO `config` (`value`, `key`) VALUES('1209600', 'session_timeout')[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'default_locale') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Create (0.1ms)[0m   [0mINSERT INTO `config` (`value`, `key`) VALUES('en', 'default_locale')[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (2.9ms)[0m   [0mCOMMIT[0m
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+  [4;35;1mRadiant::Config Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `config`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `config`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `config`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `extension_meta`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `extension_meta`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `extension_meta`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW FIELDS FROM `layouts`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `layouts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `layouts`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `page_parts`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `page_parts`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `page_parts`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mSQL (5.1ms)[0m   [0mdescribe `snippets`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `snippets`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mdescribe `config`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `config`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `extension_meta`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `extension_meta`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `extension_meta`[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mSHOW FIELDS FROM `layouts`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `layouts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `layouts`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `page_parts`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `page_parts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `page_parts`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `snippets`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `snippets`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `snippets`[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRadiantTables (1)
+Migrating to InsertInitialData (2)
+Migrating to RenameBehaviorColumn (3)
+Migrating to RenameFilterColumn (4)
+Migrating to AddVirtualColumnToPage (5)
+Migrating to IntegerColumnsToBoolean (6)
+Migrating to RemoveVirtualColumnFromPage (7)
+Migrating to AddVirtualColumnToPageAgain (8)
+Migrating to AddContentTypeFieldToLayout (9)
+Migrating to MergeBehaviorsAndPages (10)
+Migrating to RenameTypeColumnOnPageToClassName (11)
+Migrating to CreateExtensionMeta (12)
+Migrating to AddNotesFieldToUser (13)
+Migrating to RenameConfigDefaultPartsKey (14)
+Migrating to AddOptimisticLocking (15)
+Migrating to AddSessions (16)
+Migrating to RenameCreatedByUpdatedByColumns (17)
+Migrating to AddDescriptionAndKeywordsToPages (18)
+Migrating to AddSaltToUsers (19)
+Migrating to AddSessionInfoToUsers (20)
+Migrating to RemoveSessionExpireFromUsers (21)
+Migrating to AddIndexes (20081203140407)
+Migrating to AddUserLanguage (20090226140109)
+Migrating to RenameDeveloperRoleToDesigner (20090929164633)
+Migrating to ChangeUserLanguageToLocale (20091003095744)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `config`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `config`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `config`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `extension_meta`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `extension_meta`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `extension_meta`[0m
+  [4;36;1mSQL (7.3ms)[0m   [0;1mSHOW FIELDS FROM `layouts`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `layouts`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `layouts`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `page_parts`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `page_parts`[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mSHOW KEYS FROM `page_parts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `snippets`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `snippets`[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `config`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `config`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `extension_meta`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `extension_meta`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `extension_meta`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `layouts`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `layouts`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `layouts`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `page_parts`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `page_parts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `page_parts`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `snippets`[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mdescribe `snippets`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `snippets`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+  [4;35;1mRadiant::Config Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT schema_version FROM extension_meta WHERE name = 'Settings'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddDescriptionToConfig (1)
+  [4;35;1mSQL (50.1ms)[0m   [0mALTER TABLE `config` ADD `description` text[0m
+  [4;36;1mAddDescriptionToConfig::Config Load (0.3ms)[0m   [0;1mSELECT * FROM `config` [0m
+  [4;35;1mAddDescriptionToConfig::Config Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAddDescriptionToConfig::Config Update (0.1ms)[0m   [0mUPDATE `config` SET `description` = 'Title text displayed at the top of all administration screens.' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mAddDescriptionToConfig::Config Update (0.1ms)[0m   [0;1mUPDATE `config` SET `description` = 'The tagline displayed underneath the main administration title' WHERE `id` = 2[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAddDescriptionToConfig::Config Update (0.1ms)[0m   [0mUPDATE `config` SET `description` = 'Defines the page parts that a new page is created with. It should be a list, separated by a comma and a space. For example:\n\nbq. @body, extended, sidebar@\n' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mAddDescriptionToConfig::Config Update (0.1ms)[0m   [0;1mUPDATE `config` SET `description` = 'Defines the publishing status of new pages. This can any one of:\n\n* draft\n* published\n* reviewed\n* hidden\n' WHERE `id` = 4[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAddDescriptionToConfig::Config Update (0.1ms)[0m   [0mUPDATE `config` SET `description` = 'Sets the text filter a new page has by default. Valid options, in a vanilla Radiant install are:\n\n* _leave blank to set no default filter_\n* Markdown\n* SmartyPants\n* Textile\n' WHERE `id` = 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (6.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('Settings-1')[0m
+Migrating to AddSettingsRoles (2)
+  [4;36;1mAddSettingsRoles::Config Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `config`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mAddSettingsRoles::Config Create (0.1ms)[0m   [0;1mINSERT INTO `config` (`value`, `description`, `key`) VALUES('admin', 'List of user roles that may see the settings tabs.', 'roles.settings')[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('Settings-2')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `config`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `config`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `config`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `extension_meta`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `extension_meta`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `extension_meta`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `layouts`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `layouts`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `layouts`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `page_parts`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `page_parts`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `page_parts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `snippets`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `snippets`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `config`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `config`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `extension_meta`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `extension_meta`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `extension_meta`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `layouts`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `layouts`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `layouts`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `page_parts`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `page_parts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `page_parts`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `snippets`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `snippets`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `snippets`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+  [4;36;1mRadiant::Config Load (0.2ms)[0m   [0;1mSELECT * FROM `config` [0m
+  [4;35;1mRadiant::Config Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT schema_version FROM extension_meta WHERE name = 'Reorder'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddPositionToPages (1)
+  [4;35;1mSQL (58.6ms)[0m   [0mALTER TABLE `pages` ADD `position` int(11)[0m
+  [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('Reorder-1')[0m
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+  [4;36;1mRadiant::Config Load (0.2ms)[0m   [0;1mSELECT * FROM `config` [0m
+  [4;35;1mRadiant::Config Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT schema_version FROM extension_meta WHERE name = 'Paperclipped'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAssets (1)
+  [4;35;1mSQL (37.1ms)[0m   [0mCREATE TABLE `assets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `caption` varchar(255), `title` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('Paperclipped-1')[0m
+Migrating to CreatePaperclipAttributes (2)
+  [4;35;1mSQL (99.0ms)[0m   [0mALTER TABLE `assets` ADD `asset_file_name` varchar(255)[0m
+  [4;36;1mSQL (99.8ms)[0m   [0;1mALTER TABLE `assets` ADD `asset_content_type` varchar(255)[0m
+  [4;35;1mSQL (107.9ms)[0m   [0mALTER TABLE `assets` ADD `asset_file_size` int(11)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('Paperclipped-2')[0m
+Migrating to CreateUserObserver (3)
+  [4;35;1mSQL (106.7ms)[0m   [0mALTER TABLE `assets` ADD `created_by` int(11)[0m
+  [4;36;1mSQL (107.7ms)[0m   [0;1mALTER TABLE `assets` ADD `updated_by` int(11)[0m
+  [4;35;1mSQL (125.7ms)[0m   [0mALTER TABLE `assets` ADD `created_at` datetime[0m
+  [4;36;1mSQL (124.2ms)[0m   [0;1mALTER TABLE `assets` ADD `updated_at` datetime[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('Paperclipped-3')[0m
+Migrating to CreatePageAttachments (4)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (112.3ms)[0m   [0mCREATE TABLE `page_attachments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `asset_id` int(11), `page_id` int(11), `position` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('Paperclipped-4')[0m
+Migrating to RenameUsers (5)
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `assets`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW COLUMNS FROM `assets` LIKE 'created_by'[0m
+  [4;35;1mSQL (105.0ms)[0m   [0mALTER TABLE `assets` CHANGE `created_by` `created_by_id` int(11) DEFAULT NULL[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `assets`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW COLUMNS FROM `assets` LIKE 'updated_by'[0m
+  [4;36;1mSQL (80.5ms)[0m   [0;1mALTER TABLE `assets` CHANGE `updated_by` `updated_by_id` int(11) DEFAULT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('Paperclipped-5')[0m
+Migrating to AddDefaultConfigs (6)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'assets.additional_thumbnails') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Create (0.1ms)[0m   [0mINSERT INTO `config` (`value`, `description`, `key`) VALUES('normal=640x640>', NULL, 'assets.additional_thumbnails')[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'assets.display_size') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Create (0.1ms)[0m   [0mINSERT INTO `config` (`value`, `description`, `key`) VALUES('original', NULL, 'assets.display_size')[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAddDefaultConfigs::Config Load (0.3ms)[0m   [0;1mSELECT * FROM `config` [0m
+  [4;35;1mAddDefaultConfigs::Config Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAddDefaultConfigs::Config Update (0.2ms)[0m   [0mUPDATE `config` SET `description` = 'Defines the default sizes for image assets that are created when an image is uploaded. Use \"#\" to crop the image to a specific size. \"42x42#\" would be a square thumbnail, cropped in the center 42 pixels by 42 pixels.' WHERE `id` = 9[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mAddDefaultConfigs::Config Update (0.1ms)[0m   [0;1mUPDATE `config` SET `description` = 'Sets which of your image sizes is shown is the edit view. Defaults to the \"original\" image size, but any size may be used. ' WHERE `id` = 10[0m
+  [4;35;1mSQL (22.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('Paperclipped-6')[0m
+Migrating to AddDefaultContentTypes (7)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'assets.content_types') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRadiant::Config Create (0.1ms)[0m   [0;1mINSERT INTO `config` (`value`, `description`, `key`) VALUES('image/jpeg, image/pjpeg, image/gif, image/png, image/x-png, image/jpg, video/x-m4v, video/quicktime, application/x-shockwave-flash, audio/mpeg, video/mpeg', NULL, 'assets.content_types')[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;36;1mSQL (3.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'assets.max_asset_size') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRadiant::Config Create (0.1ms)[0m   [0;1mINSERT INTO `config` (`value`, `description`, `key`) VALUES('5', NULL, 'assets.max_asset_size')[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAddDefaultContentTypes::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` [0m
+  [4;36;1mAddDefaultContentTypes::Config Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `config`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mAddDefaultContentTypes::Config Update (0.2ms)[0m   [0;1mUPDATE `config` SET `description` = 'Defines the content types of that will be allowed to be uploaded as assets.' WHERE `id` = 11[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAddDefaultContentTypes::Config Update (0.1ms)[0m   [0mUPDATE `config` SET `description` = 'The size in megabytes that will be the max size allowed to be uploaded for an asset' WHERE `id` = 12[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('Paperclipped-7')[0m
+Migrating to DisableFileTypes (20090316132151)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'assets.skip_filetype_validation') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Create (0.1ms)[0m   [0mINSERT INTO `config` (`value`, `description`, `key`) VALUES('true', NULL, 'assets.skip_filetype_validation')[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRadiant::Config Load (0.4ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Load (0.3ms)[0m   [0mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('Paperclipped-20090316132151')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `assets`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `assets`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `assets`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `config`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `config`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `extension_meta`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `extension_meta`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `extension_meta`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `layouts`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `layouts`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `layouts`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `page_attachments`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `page_attachments`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `page_attachments`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `page_parts`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `page_parts`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `page_parts`[0m
+  [4;36;1mSQL (26.3ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `snippets`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `snippets`[0m
+  [4;35;1mSQL (7.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mSHOW FIELDS FROM `assets`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `assets`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `assets`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `config`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `config`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `config`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `extension_meta`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `extension_meta`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `extension_meta`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `layouts`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `layouts`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `layouts`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `page_attachments`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `page_attachments`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `page_attachments`[0m
+  [4;36;1mSQL (9.9ms)[0m   [0;1mSHOW FIELDS FROM `page_parts`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `page_parts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `page_parts`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mSHOW FIELDS FROM `snippets`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `snippets`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `snippets`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+  [4;36;1mRadiant::Config Load (0.2ms)[0m   [0;1mSELECT * FROM `config` [0m
+  [4;35;1mRadiant::Config Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT schema_version FROM extension_meta WHERE name = 'Navigation Tags'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateNavigationTypes (1)
+  [4;35;1mSQL (49.8ms)[0m   [0mCREATE TABLE `navigation_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (144.5ms)[0m   [0;1mALTER TABLE `pages` ADD `navigationTypeId` int(11)[0m
+  [4;35;1mNavigationType Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `navigation_types`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNavigationType Create (0.1ms)[0m   [0mINSERT INTO `navigation_types` (`name`, `created_at`, `updated_at`) VALUES('Main', '2010-12-27 23:13:16', '2010-12-27 23:13:16')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mNavigationType Create (0.1ms)[0m   [0;1mINSERT INTO `navigation_types` (`name`, `created_at`, `updated_at`) VALUES('Help', '2010-12-27 23:13:16', '2010-12-27 23:13:16')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('Navigation Tags-1')[0m
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+  [4;36;1mRadiant::Config Load (0.2ms)[0m   [0;1mSELECT * FROM `config` [0m
+  [4;35;1mRadiant::Config Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::WelcomeController#index (for 127.0.0.1 at 2010-12-28 00:13:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/welcome"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Redirected to http://localhost:3000/admin/pages
+Completed in 9ms (DB: 3) | 302 Found [http://localhost/admin/]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-12-28 00:13:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/pages"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` [0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering admin/pages/index
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/pages/_header (0.4ms)
+Rendered admin/pages/_order_header (0.5ms)
+Completed in 132ms (View: 122, DB: 3) | 200 OK [http://localhost/admin/pages]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::AssetsController#index (for 127.0.0.1 at 2010-12-28 00:13:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/assets"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (3.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT * FROM `assets` LIMIT 0, 50[0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM `assets` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering admin/assets/index
+Rendered admin/assets/_asset_table (7.4ms)
+Rendered admin/assets/_bucket (1.2ms)
+Rendered admin/assets/_bucket (1.0ms)
+Rendered admin/assets/_assets_container (14.5ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 149ms (View: 135, DB: 7) | 200 OK [http://localhost/admin/assets]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::NavigationTypesController#index (for 127.0.0.1 at 2010-12-28 00:13:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/navigation_types"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mNavigationType Load (0.1ms)[0m   [0mSELECT * FROM `navigation_types` [0m
+Rendering template within layouts/application
+Rendering admin/navigation_types/index
+  [4;36;1mNavigationType Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `navigation_types`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 55ms (View: 43, DB: 4) | 200 OK [http://localhost/admin/navigation_types]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::AssetsController#index (for 127.0.0.1 at 2010-12-28 00:13:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/assets"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT * FROM `assets` LIMIT 0, 50[0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT * FROM `assets` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering admin/assets/index
+Rendered admin/assets/_asset_table (2.7ms)
+Rendered admin/assets/_bucket (0.1ms)
+Rendered admin/assets/_bucket (0.1ms)
+Rendered admin/assets/_assets_container (3.6ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 55ms (View: 45, DB: 4) | 200 OK [http://localhost/admin/assets]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::NavigationTypesController#index (for 127.0.0.1 at 2010-12-28 00:13:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/navigation_types"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mNavigationType Load (0.2ms)[0m   [0mSELECT * FROM `navigation_types` [0m
+Rendering template within layouts/application
+Rendering admin/navigation_types/index
+  [4;36;1mNavigationType Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `navigation_types`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 111ms (View: 37, DB: 4) | 200 OK [http://localhost/admin/navigation_types]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::NavigationTypesController#new (for 127.0.0.1 at 2010-12-28 00:13:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin/navigation_types"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mNavigationType Columns (6.1ms)[0m   [0mSHOW FIELDS FROM `navigation_types`[0m
+Rendering template within layouts/application
+Rendering admin/navigation_types/new
+Rendered admin/navigation_types/_navigation_type (22.6ms)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 125ms (View: 107, DB: 9) | 200 OK [http://localhost/admin/navigation_types/new]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::NavigationTypesController#create (for 127.0.0.1 at 2010-12-28 00:13:48) [POST]
+  Parameters: {"commit"=>"Create {{name}}", "action"=>"create", "authenticity_token"=>"IlVlrP1z4C9ExbRkANTuLqJ+lewD1nzAGN52/umlSHU=", "navigation_type"=>{"name"=>"Blog"}, "controller"=>"admin/navigation_types"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mNavigationType Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `navigation_types`[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mNavigationType Create (0.2ms)[0m   [0;1mINSERT INTO `navigation_types` (`name`, `created_at`, `updated_at`) VALUES('Blog', '2010-12-27 23:13:48', '2010-12-27 23:13:48')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/admin/navigation_types
+Completed in 19ms (DB: 7) | 302 Found [http://localhost/admin/navigation_types]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Columns (97.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::NavigationTypesController#index (for 127.0.0.1 at 2010-12-28 00:13:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/navigation_types"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mNavigationType Load (0.1ms)[0m   [0;1mSELECT * FROM `navigation_types` [0m
+Rendering template within layouts/application
+Rendering admin/navigation_types/index
+  [4;35;1mNavigationType Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `navigation_types`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 108ms (View: 96, DB: 4) | 200 OK [http://localhost/admin/navigation_types]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LayoutsController#index (for 127.0.0.1 at 2010-12-28 00:13:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/layouts"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mLayout Load (0.1ms)[0m   [0mSELECT * FROM `layouts` ORDER BY name LIMIT 0, 50[0m
+Rendering template within layouts/application
+Rendering admin/layouts/index
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 53ms (View: 42, DB: 4) | 200 OK [http://localhost/admin/layouts]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PreferencesController#show (for 127.0.0.1 at 2010-12-28 00:13:52) [GET]
+  Parameters: {"action"=>"show", "controller"=>"admin/preferences"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendering template within layouts/application
+Rendering admin/preferences/edit
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/users/_avatar (0.9ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'admin' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'admin' AND `users`.id <> 1) LIMIT 1[0m
+Rendered admin/users/_password_fields (6.5ms)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 86ms (View: 76, DB: 4) | 200 OK [http://localhost/admin/preferences]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PreferencesController#show (for 127.0.0.1 at 2010-12-28 00:13:58) [GET]
+  Parameters: {"action"=>"show", "controller"=>"admin/preferences"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendering template within layouts/application
+Rendering admin/preferences/edit
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/users/_avatar (0.2ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'admin' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'admin' AND `users`.id <> 1) LIMIT 1[0m
+Rendered admin/users/_password_fields (4.1ms)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 72ms (View: 63, DB: 3) | 200 OK [http://localhost/admin/preferences]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2010-12-28 00:13:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/users"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` ORDER BY name LIMIT 0, 50[0m
+Rendering template within layouts/application
+Rendering admin/users/index
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 123ms (View: 51, DB: 4) | 200 OK [http://localhost/admin/users]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::ExtensionsController#index (for 127.0.0.1 at 2010-12-28 00:14:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/extensions"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendering template within layouts/application
+Rendering admin/extensions/index
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 149ms (View: 129, DB: 5) | 200 OK [http://localhost/admin/extensions]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+
+
+Processing Admin::SettingsController#index (for 127.0.0.1 at 2010-12-28 00:14:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/settings"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mRadiant::Config Load (0.2ms)[0m   [0mSELECT * FROM `config` ORDER BY `key`[0m
+  [4;36;1mRadiant::Config Columns (7.8ms)[0m   [0;1mSHOW FIELDS FROM `config`[0m
+Rendering template within layouts/application
+Rendering admin/settings/index
+Rendered admin/settings/_setting (0.5ms)
+Rendered admin/settings/_setting (0.3ms)
+Rendered admin/settings/_setting (3.3ms)
+Rendered admin/settings/_setting (0.3ms)
+Rendered admin/settings/_setting (0.3ms)
+Rendered admin/settings/_setting (0.3ms)
+Rendered admin/settings/_setting (0.3ms)
+Rendered admin/settings/_setting (0.3ms)
+Rendered admin/settings/_setting (2.7ms)
+Rendered admin/settings/_setting (0.4ms)
+Rendered admin/settings/_setting (0.3ms)
+Rendered admin/settings/_setting (0.3ms)
+Rendered admin/settings/_setting (1.6ms)
+Rendered admin/settings/_setting (1.9ms)
+Rendered admin/settings/_setting (0.3ms)
+Rendered admin/settings/_setting (0.5ms)
+Rendered admin/settings/_setting (0.7ms)
+Rendered admin/settings/_setting (0.3ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 141ms (View: 63, DB: 12) | 200 OK [http://localhost/admin/settings]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::ExtensionsController#index (for 127.0.0.1 at 2010-12-28 00:14:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/extensions"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendering template within layouts/application
+Rendering admin/extensions/index
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 144ms (View: 63, DB: 4) | 200 OK [http://localhost/admin/extensions]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-12-28 00:14:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/pages"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering admin/pages/index
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/pages/_header (0.1ms)
+Rendered admin/pages/_order_header (0.1ms)
+Completed in 54ms (View: 43, DB: 3) | 200 OK [http://localhost/admin/pages]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#new (for 127.0.0.1 at 2010-12-28 00:14:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin/pages"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mPagePart Columns (11.2ms)[0m   [0;1mSHOW FIELDS FROM `page_parts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendering template within layouts/application
+Rendering admin/pages/new
+Rendered admin/pages/_meta_row (1.3ms)
+Rendered admin/pages/_meta_row (0.4ms)
+Rendered admin/pages/_meta_row (0.4ms)
+Rendered admin/pages/_meta_row (0.4ms)
+Rendered admin/assets/_show_bucket_link (0.8ms)
+Rendered admin/page_parts/_page_part (132.0ms)
+Rendered admin/assets/_show_bucket_link (0.1ms)
+Rendered admin/page_parts/_page_part (13.6ms)
+  [4;35;1mLayout Load (0.3ms)[0m   [0mSELECT * FROM `layouts` ORDER BY name[0m
+Rendered admin/pages/_navigation_type (1.2ms)
+Rendered admin/pages/_fields (186.3ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/pages/_popups (62.7ms)
+Rendered admin/assets/_bucket (0.1ms)
+Rendered admin/assets/_assets_container (4.8ms)
+Rendered admin/assets/_assets_bucket (6.2ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 404ms (View: 367, DB: 16) | 200 OK [http://localhost/admin/pages/new]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#create (for 127.0.0.1 at 2010-12-28 00:14:25) [POST]
+  Parameters: {"commit"=>"Create {{name}}", "action"=>"create", "authenticity_token"=>"IlVlrP1z4C9ExbRkANTuLqJ+lewD1nzAGN52/umlSHU=", "page"=>{"class_name"=>"", "slug"=>"/", "title"=>"JCVP Kanton Luzern", "parts_attributes"=>{"0"=>{"name"=>"body", "filter_id"=>"", "content"=>"", "_destroy"=>""}, "1"=>{"name"=>"extended", "filter_id"=>"", "content"=>"", "_destroy"=>""}}, "lock_version"=>"0", "breadcrumb"=>"JCVP Kanton Luzern", "parent_id"=>"", "published_at"=>"", "status_id"=>"100", "description"=>"", "layout_id"=>"", "keywords"=>""}, "controller"=>"admin/pages"}
+  [4;35;1mUser Columns (11.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mPagePart Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `page_parts`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY '/' AND `pages`.parent_id IS NULL) LIMIT 1[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mPage Create (0.2ms)[0m   [0mINSERT INTO `pages` (`slug`, `class_name`, `updated_by_id`, `position`, `created_at`, `title`, `virtual`, `navigationTypeId`, `updated_at`, `created_by_id`, `lock_version`, `breadcrumb`, `parent_id`, `status_id`, `published_at`, `description`, `layout_id`, `keywords`) VALUES('/', '', NULL, 1, '2010-12-27 23:14:25', 'JCVP Kanton Luzern', 0, NULL, '2010-12-27 23:14:25', 1, 0, 'JCVP Kanton Luzern', NULL, 100, '2010-12-28 00:14:25', '', NULL, '')[0m
+  [4;36;1mPagePart Create (0.1ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `page_id`, `content`) VALUES('body', '', 1, '')[0m
+  [4;35;1mPagePart Create (0.1ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `page_id`, `content`) VALUES('extended', '', 1, '')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/pages
+Completed in 148ms (DB: 17) | 302 Found [http://localhost/admin/pages]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (16.6ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-12-28 00:14:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/pages"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` [0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering admin/pages/index
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/pages/_header (0.1ms)
+Rendered admin/pages/_order_header (0.1ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+Rendered admin/pages/_order (0.8ms)
+Rendered admin/pages/_node (108.4ms)
+Completed in 164ms (View: 153, DB: 3) | 200 OK [http://localhost/admin/pages]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+** has_many_polymorphs: rails environment detected
+** has_many_polymorphs: loaded ok
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/tags/tags_extension.rb:11)
+** has_many_polymorphs: autoload hook invoked
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+  [4;36;1mRadiant::Config Load (0.2ms)[0m   [0;1mSELECT * FROM `config` [0m
+  [4;35;1mRadiant::Config Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'tags.results_page_url') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRadiant::Config Create (0.1ms)[0m   [0;1mINSERT INTO `config` (`value`, `description`, `key`) VALUES('/search/by-tag', NULL, 'tags.results_page_url')[0m
+  [4;35;1mRadiant::Config Load (0.1ms)[0m   [0mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;36;1mSQL (33.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRadiant::Config Load (0.2ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'tags.complex_strings') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRadiant::Config Create (0.1ms)[0m   [0mINSERT INTO `config` (`value`, `description`, `key`) VALUES('false', NULL, 'tags.complex_strings')[0m
+  [4;36;1mRadiant::Config Load (0.1ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+** has_many_polymorphs: associating MetaTag.taggables
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mTagging Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'jcvp_lu_development.taggings' doesn't exist: SHOW FIELDS FROM `taggings`[0m
+** has_many_polymorphs: Looks like your table doesn't exist for Tagging.
+Error Mysql::Error: Table 'jcvp_lu_development.taggings' doesn't exist: SHOW FIELDS FROM `taggings`
+Skipping...
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+** has_many_polymorphs: autoload hook invoked
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT schema_version FROM extension_meta WHERE name = 'Tags'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddTagSupport (1)
+  [4;35;1mSQL (70.7ms)[0m   [0mCREATE TABLE `meta_tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `meta_tags`[0m
+  [4;35;1mSQL (222.9ms)[0m   [0mCREATE UNIQUE INDEX `index_meta_tags_on_name` ON `meta_tags` (`name`)[0m
+  [4;36;1mSQL (98.2ms)[0m   [0;1mCREATE TABLE `taggings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `meta_tag_id` int(11) NOT NULL, `taggable_id` int(11) NOT NULL, `taggable_type` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `taggings`[0m
+  [4;36;1mSQL (109.4ms)[0m   [0;1mCREATE UNIQUE INDEX `index_taggings_on_meta_tag_id_and_taggable_id_and_taggable_type` ON `taggings` (`meta_tag_id`, `taggable_id`, `taggable_type`)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('Tags-1')[0m
+** has_many_polymorphs: rails environment detected
+** has_many_polymorphs: loaded ok
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/tags/tags_extension.rb:11)
+** has_many_polymorphs: autoload hook invoked
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+  [4;36;1mRadiant::Config Load (0.2ms)[0m   [0;1mSELECT * FROM `config` [0m
+  [4;35;1mRadiant::Config Columns (8.4ms)[0m   [0mSHOW FIELDS FROM `config`[0m
+Cache write: Radiant::Config
+Cache write: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+** has_many_polymorphs: associating MetaTag.taggables
+  [4;36;1mPage Columns (43.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mTagging Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `taggings`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+** has_many_polymorphs: autoload hook invoked
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+** has_many_polymorphs: autoload hook invoked
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-12-28 00:17:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/pages"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering admin/pages/index
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/pages/_header (0.5ms)
+Rendered admin/pages/_order_header (0.7ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+Rendered admin/pages/_order (0.7ms)
+Rendered admin/pages/_node (23.9ms)
+Completed in 159ms (View: 148, DB: 3) | 200 OK [http://localhost/admin/pages]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/tags/tags_extension.rb:11)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+** has_many_polymorphs: associating MetaTag.taggables
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mTagging Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+** has_many_polymorphs: autoload hook invoked
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LayoutsController#index (for 127.0.0.1 at 2010-12-28 00:17:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/layouts"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mLayout Load (0.1ms)[0m   [0mSELECT * FROM `layouts` ORDER BY name LIMIT 0, 50[0m
+Rendering template within layouts/application
+Rendering admin/layouts/index
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 54ms (View: 43, DB: 4) | 200 OK [http://localhost/admin/layouts]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/tags/tags_extension.rb:11)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+** has_many_polymorphs: associating MetaTag.taggables
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mTagging Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+** has_many_polymorphs: autoload hook invoked
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LayoutsController#index (for 127.0.0.1 at 2010-12-28 00:17:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/layouts"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mLayout Load (0.1ms)[0m   [0mSELECT * FROM `layouts` ORDER BY name LIMIT 0, 50[0m
+Rendering template within layouts/application
+Rendering admin/layouts/index
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 47ms (View: 36, DB: 4) | 200 OK [http://localhost/admin/layouts]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/tags/tags_extension.rb:11)
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+** has_many_polymorphs: associating MetaTag.taggables
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mTagging Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+** has_many_polymorphs: autoload hook invoked
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-12-28 00:17:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/pages"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering admin/pages/index
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/pages/_header (0.1ms)
+Rendered admin/pages/_order_header (0.1ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+Rendered admin/pages/_order (0.1ms)
+Rendered admin/pages/_node (12.8ms)
+Completed in 124ms (View: 113, DB: 4) | 200 OK [http://localhost/admin/pages]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/tags/tags_extension.rb:11)
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+** has_many_polymorphs: associating MetaTag.taggables
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mTagging Columns (5.4ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+** has_many_polymorphs: autoload hook invoked
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#edit (for 127.0.0.1 at 2010-12-28 00:18:02) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/pages"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering admin/pages/edit
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/pages/_meta_row (1.5ms)
+Rendered admin/pages/_meta_row (0.5ms)
+Rendered admin/pages/_meta_row (0.5ms)
+Rendered admin/pages/_meta_row (0.5ms)
+  [4;35;1mMetaTag Load (0.4ms)[0m   [0mSELECT `meta_tags`.* FROM `meta_tags` INNER JOIN `taggings` ON `meta_tags`.id = `taggings`.meta_tag_id WHERE ((`taggings`.taggable_id = 1) AND (`taggings`.taggable_type = 'Page')) [0m
+Rendered admin/pages/_tag_field (3.2ms)
+  [4;36;1mPagePart Load (0.3ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 1) ORDER BY id, name[0m
+  [4;35;1mPagePart Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `page_parts`[0m
+Rendered admin/assets/_show_bucket_link (1.1ms)
+Rendered admin/page_parts/_page_part (146.6ms)
+Rendered admin/assets/_show_bucket_link (0.2ms)
+Rendered admin/page_parts/_page_part (14.3ms)
+  [4;36;1mLayout Load (0.2ms)[0m   [0;1mSELECT * FROM `layouts` ORDER BY name[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+Rendered admin/pages/_navigation_type (1.2ms)
+Rendered admin/pages/_fields (221.4ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/pages/_popups (5.5ms)
+Rendered admin/assets/_bucket (1.2ms)
+  [4;35;1mAsset Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `assets`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `assets` INNER JOIN `page_attachments` ON `assets`.id = `page_attachments`.asset_id WHERE ((`page_attachments`.page_id = 1)) [0m
+Rendered admin/assets/_page_assets (8.7ms)
+Rendered admin/assets/_upload_to_page (2.9ms)
+Rendered admin/assets/_assets_container (40.3ms)
+Rendered admin/assets/_assets_bucket (44.6ms)
+Completed in 555ms (View: 541, DB: 7) | 200 OK [http://localhost/admin/pages/1/edit]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/tags/tags_extension.rb:11)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+** has_many_polymorphs: associating MetaTag.taggables
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mTagging Columns (6.9ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+** has_many_polymorphs: autoload hook invoked
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LayoutsController#index (for 127.0.0.1 at 2010-12-28 00:18:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/layouts"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (19.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mLayout Load (0.1ms)[0m   [0mSELECT * FROM `layouts` ORDER BY name LIMIT 0, 50[0m
+Rendering template within layouts/application
+Rendering admin/layouts/index
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 65ms (View: 34, DB: 23) | 200 OK [http://localhost/admin/layouts]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/tags/tags_extension.rb:11)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+** has_many_polymorphs: associating MetaTag.taggables
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mTagging Columns (8.3ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+** has_many_polymorphs: autoload hook invoked
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PreferencesController#show (for 127.0.0.1 at 2010-12-28 00:18:10) [GET]
+  Parameters: {"action"=>"show", "controller"=>"admin/preferences"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendering template within layouts/application
+Rendering admin/preferences/edit
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/users/_avatar (0.9ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'admin' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'admin' AND `users`.id <> 1) LIMIT 1[0m
+Rendered admin/users/_password_fields (6.4ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Completed in 90ms (View: 80, DB: 4) | 200 OK [http://localhost/admin/preferences]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/tags/tags_extension.rb:11)
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+** has_many_polymorphs: associating MetaTag.taggables
+  [4;35;1mPage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mTagging Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+** has_many_polymorphs: autoload hook invoked
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-12-28 00:18:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/pages"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering admin/pages/index
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/pages/_header (0.1ms)
+Rendered admin/pages/_order_header (0.1ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+Rendered admin/pages/_order (0.1ms)
+Rendered admin/pages/_node (93.4ms)
+Completed in 148ms (View: 137, DB: 3) | 200 OK [http://localhost/admin/pages]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/tags/tags_extension.rb:11)
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+** has_many_polymorphs: associating MetaTag.taggables
+  [4;35;1mPage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mTagging Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+** has_many_polymorphs: autoload hook invoked
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-12-28 00:18:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/pages"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering admin/pages/index
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+Rendered admin/pages/_header (0.1ms)
+Rendered admin/pages/_order_header (0.1ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+Rendered admin/pages/_order (0.1ms)
+Rendered admin/pages/_node (13.7ms)
+Completed in 69ms (View: 58, DB: 3) | 200 OK [http://localhost/admin/pages]
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/navigation_tags/navigation_tags_extension.rb:13)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/reorder/reorder_extension.rb:9)
+DEPRECATION WARNING: define_routes has been deprecated in favor of your extension's config/routes.rb. (called from /Users/pascal/radiant/jcvp-lu/vendor/extensions/tags/tags_extension.rb:11)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Cache read: Radiant.cache_mtime
+Cache read: Radiant::Config
+** has_many_polymorphs: associating MetaTag.taggables
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mTagging Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
