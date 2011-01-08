@@ -547,17 +547,27 @@ body.two-col #content {
 /* line 1, ../sass/jcvp/partials/_tags.sass */
 body {
   background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
-/* line 4, ../sass/jcvp/partials/_tags.sass */
+/* line 6, ../sass/jcvp/partials/_tags.sass */
 a:link, a:visited {
   text-decoration: none;
   color: black;
 }
 
-/* line 8, ../sass/jcvp/partials/_tags.sass */
+/* line 10, ../sass/jcvp/partials/_tags.sass */
 p {
   margin-bottom: 10px;
+}
+
+/* line 13, ../sass/jcvp/partials/_tags.sass */
+h1 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #f07d08;
 }
 
 /* line 1, ../sass/jcvp/partials/_main.sass */
@@ -575,27 +585,63 @@ div#helpNavigation {
   margin-right: 10px;
   width: 950px;
   background-color: #707070;
-  height: 21px;
+  height: 27px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html div#helpNavigation {
   overflow-x: hidden;
 }
-
 /* line 9, ../sass/jcvp/partials/_main.sass */
+div#helpNavigation a#rss div#rss-icon {
+  float: left;
+  width: 39px;
+  height: 27px;
+  background-image: url(/images/styles/icons_sprite.gif);
+  background-position: -416px 113px;
+}
+/* line 16, ../sass/jcvp/partials/_main.sass */
+div#helpNavigation a#rss:hover div#rss-icon {
+  background-position: -416px 47px;
+}
+/* line 19, ../sass/jcvp/partials/_main.sass */
+div#helpNavigation a#facebook div#facebook-icon {
+  float: left;
+  width: 39px;
+  height: 27px;
+  background-image: url(/images/styles/icons_sprite.gif);
+  background-position: -179px 113px;
+}
+/* line 26, ../sass/jcvp/partials/_main.sass */
+div#helpNavigation a#facebook:hover div#facebook-icon {
+  background-position: -179px 47px;
+}
+/* line 29, ../sass/jcvp/partials/_main.sass */
+div#helpNavigation a#flicker div#flicker-icon {
+  float: left;
+  width: 39px;
+  height: 27px;
+  background-image: url(/images/styles/icons_sprite.gif);
+  background-position: -258px 113px;
+}
+/* line 36, ../sass/jcvp/partials/_main.sass */
+div#helpNavigation a#flicker:hover div#flicker-icon {
+  background-position: -258px 47px;
+}
+
+/* line 39, ../sass/jcvp/partials/_main.sass */
 div#mainNavigation {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 950px;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html div#mainNavigation {
   overflow-x: hidden;
 }
 
-/* line 13, ../sass/jcvp/partials/_main.sass */
+/* line 43, ../sass/jcvp/partials/_main.sass */
 div#mainNavigationImage {
   display: inline;
   float: left;
@@ -607,27 +653,36 @@ div#mainNavigationImage {
   overflow-x: hidden;
 }
 
-/* line 16, ../sass/jcvp/partials/_main.sass */
+/* line 46, ../sass/jcvp/partials/_main.sass */
+div.mainNavigationContent div#mainNavigationBar {
+  margin-top: -95px;
+}
+
+/* line 48, ../sass/jcvp/partials/_main.sass */
+div.mainNavigationContent div#mainNavigationImage {
+  height: 105px;
+}
+
+/* line 51, ../sass/jcvp/partials/_main.sass */
 div#mainNavigationBar {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 950px;
-  margin-top: -298px;
+  margin-top: -340px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html div#mainNavigationBar {
   overflow-x: hidden;
 }
-/* line 19, ../sass/jcvp/partials/_main.sass */
+/* line 54, ../sass/jcvp/partials/_main.sass */
 div#mainNavigationBar div#mainNavigationBarItems {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 790px;
+  width: 710px;
   background-color: #707070;
   opacity: 0.8;
-  margin-top: 66px;
   margin-right: 0;
   height: 30px;
 }
@@ -635,7 +690,7 @@ div#mainNavigationBar div#mainNavigationBarItems {
 * html div#mainNavigationBar div#mainNavigationBarItems {
   overflow-x: hidden;
 }
-/* line 26, ../sass/jcvp/partials/_main.sass */
+/* line 60, ../sass/jcvp/partials/_main.sass */
 div#mainNavigationBar div#mainNavigationBarItems ul {
   margin: 0;
   padding: 0;
@@ -663,15 +718,14 @@ div#mainNavigationBar div#mainNavigationBarItems ul li:first-child, div#mainNavi
 div#mainNavigationBar div#mainNavigationBarItems ul li:last-child, div#mainNavigationBar div#mainNavigationBarItems ul li.last {
   padding-right: 0;
 }
-/* line 28, ../sass/jcvp/partials/_main.sass */
+/* line 62, ../sass/jcvp/partials/_main.sass */
 div#mainNavigationBar div#mainNavigationBarItems ul li {
-  margin-right: 20px;
-  width: 120px;
-  padding-left: 0;
-  padding-right: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
 }
-/* line 34, ../sass/jcvp/partials/_main.sass */
+/* line 67, ../sass/jcvp/partials/_main.sass */
 div#mainNavigationBar div#mainNavigationBarItems ul li a {
   color: white;
   font: bold 16px arial, arial;
@@ -679,45 +733,34 @@ div#mainNavigationBar div#mainNavigationBarItems ul li a {
   display: block;
   padding-top: 6px;
 }
-/* line 40, ../sass/jcvp/partials/_main.sass */
-div#mainNavigationBar div#mainNavigationBarItems ul li ul {
-  display: none;
-}
-/* line 42, ../sass/jcvp/partials/_main.sass */
+/* line 73, ../sass/jcvp/partials/_main.sass */
 div#mainNavigationBar div#mainNavigationBarItems ul li:hover {
   background-color: #f07d08;
 }
-/* line 44, ../sass/jcvp/partials/_main.sass */
-div#mainNavigationBar div#mainNavigationBarItems ul li:hover ul {
-  display: block;
-  position: absolute;
-}
-/* line 47, ../sass/jcvp/partials/_main.sass */
-div#mainNavigationBar div#mainNavigationBarItems ul li:hover ul li {
-  background-color: black;
-  width: 120px;
-  padding-left: 0;
-  padding-right: 0;
-  text-align: center;
-}
-/* line 53, ../sass/jcvp/partials/_main.sass */
-div#mainNavigationBar div#mainNavigationBarItems ul li:hover ul li:hover {
+/* line 75, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar div#mainNavigationBarItems ul li.current, div#mainNavigationBar div#mainNavigationBarItems ul li.parent_of_current {
   background-color: #f07d08;
 }
-/* line 56, ../sass/jcvp/partials/_main.sass */
+/* line 77, ../sass/jcvp/partials/_main.sass */
+div#mainNavigationBar div#mainNavigationBarItems ul li:first-child {
+  padding-left: 20px;
+}
+/* line 80, ../sass/jcvp/partials/_main.sass */
 div#mainNavigationBar div#mainNavigationBarLogo {
+  padding-left: 40px;
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 150px;
+  width: 190px;
   margin-right: 0;
+  margin-left: 10px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html div#mainNavigationBar div#mainNavigationBarLogo {
   overflow-x: hidden;
 }
 
-/* line 60, ../sass/jcvp/partials/_main.sass */
+/* line 86, ../sass/jcvp/partials/_main.sass */
 div#whiteboard {
   display: inline;
   float: left;
@@ -729,123 +772,203 @@ div#whiteboard {
 * html div#whiteboard {
   overflow-x: hidden;
 }
-/* line 63, ../sass/jcvp/partials/_main.sass */
+/* line 89, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#leftWhiteboard {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 230px;
+  width: 150px;
+  margin-top: 4px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html div#whiteboard div#leftWhiteboard {
   overflow-x: hidden;
 }
-/* line 65, ../sass/jcvp/partials/_main.sass */
-div#whiteboard div#leftWhiteboard div#2LevelNavigation {
+/* line 92, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#leftWhiteboard div#second-Level-Navigation {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 230px;
+  width: 150px;
   margin-buttom: 20px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html div#whiteboard div#leftWhiteboard div#2LevelNavigation {
+* html div#whiteboard div#leftWhiteboard div#second-Level-Navigation {
   overflow-x: hidden;
 }
-/* line 68, ../sass/jcvp/partials/_main.sass */
-div#whiteboard div#rightWhiteboard {
+/* line 97, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#leftWhiteboard div#second-Level-Navigation ul li a:hover {
+  color: #f07d08;
+}
+/* line 100, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#leftWhiteboard div#second-Level-Navigation ul li.current a, div#whiteboard div#leftWhiteboard div#second-Level-Navigation ul li.parent_of_current a {
+  color: #f07d08;
+}
+/* line 105, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div.leftWhiteboard-Blog div#second-Level-Navigation ul li {
+  margin-bottom: 10px;
+}
+/* line 107, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#centerWhiteboard {
+  padding-left: 0px;
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 710px;
+  width: 590px;
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#whiteboard div#centerWhiteboard {
+  overflow-x: hidden;
+}
+/* line 110, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#centerWhiteboard div#centerWhiteboard-left-right-border {
+  padding-left: 0px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 590px;
+  background-image: url(/images/styles/content_shadow.png);
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#whiteboard div#centerWhiteboard div#centerWhiteboard-left-right-border {
+  overflow-x: hidden;
+}
+/* line 114, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#centerWhiteboard div#contentNavigation {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 590px;
   margin-right: 0;
-  background-color: #aaaaaa;
-  padding-bottom: 2px;
+  height: 20px;
+  color: white;
+  background-image: url(/images/styles/shadow_top_bottom.png);
+  padding-top: 6px;
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#whiteboard div#centerWhiteboard div#contentNavigation {
+  overflow-x: hidden;
+}
+/* line 121, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation-items {
+  margin-left: 6px;
+}
+/* line 123, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation-items div.contentNavigation-item {
+  float: left;
+  line-height: 20px;
+  text-align: center;
+  margin-right: 10px;
+  padding-left: 8px;
+  padding-right: 14px;
+  font-weight: bold;
+}
+/* line 128, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation-items div.contentNavigation-item a {
+  color: white;
+}
+/* line 133, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation-items div.contentNavigation-acitve-item-left-corner {
+  float: left;
+  line-height: 20px;
+  width: 5px;
+  background-image: url(/images/styles/content_area_tab_bg.gif);
+  background-position: left top;
+}
+/* line 139, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation-items div.contentNavigation-acitve-item {
+  background-image: url(/images/styles/content_area_tab_bg.gif);
+  background-position: right top;
+  color: black;
+}
+/* line 143, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation-items div.contentNavigation-acitve-item a {
+  color: black;
+}
+/* line 145, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#centerWhiteboard div#content {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 550px;
+  margin-right: 0;
+  margin: 10px 20px 0 20px;
+  padding-right: 36px;
+  min-height: 400px;
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#whiteboard div#centerWhiteboard div#content {
+  overflow-x: hidden;
+}
+/* line 151, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#centerWhiteboard div#centerWhiteboard-bottom-border {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 590px;
+  background-image: url(/images/styles/shadow_top_bottom.png);
+  height: 10px;
+  background-position: left bottom;
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#whiteboard div#centerWhiteboard div#centerWhiteboard-bottom-border {
+  overflow-x: hidden;
+}
+/* line 156, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div#rightWhiteboard {
+  padding-left: 0px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 190px;
+  margin-right: 0;
+  margin-top: 4px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html div#whiteboard div#rightWhiteboard {
   overflow-x: hidden;
 }
-/* line 73, ../sass/jcvp/partials/_main.sass */
-div#whiteboard div#rightWhiteboard div#contentNavigation {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 710px;
-  margin-right: 0;
-  height: 25px;
-  margin: 0 -2px -2px 2px;
-  color: white;
-}
-/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html div#whiteboard div#rightWhiteboard div#contentNavigation {
-  overflow-x: hidden;
-}
-/* line 79, ../sass/jcvp/partials/_main.sass */
-div#whiteboard div#rightWhiteboard div#content {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 670px;
-  margin-right: 0;
-  background-color: white;
-  margin: 0 0 0 2px;
-  padding-right: 36px;
-  min-height: 600px;
-}
-/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html div#whiteboard div#rightWhiteboard div#content {
-  overflow-x: hidden;
-}
 
-/* line 87, ../sass/jcvp/partials/_main.sass */
+/* line 162, ../sass/jcvp/partials/_main.sass */
 div.box {
   float: left;
-  width: 215px;
+  width: 184px;
   padding-bottom: 2px;
   margin-bottom: 20px;
+  margin-left: 8px;
+  background-image: url(/images/styles/bg_box.png);
+  height: 180px;
 }
-/* line 92, ../sass/jcvp/partials/_main.sass */
-div.box div.boxTitle {
-  float: left;
-  width: 215px;
-  height: 25px;
-  color: white;
-  background-image: url(/images/styles/shadow_top_bottom.png);
-}
-/* line 98, ../sass/jcvp/partials/_main.sass */
+/* line 170, ../sass/jcvp/partials/_main.sass */
 div.box div.boxBody {
   float: left;
-  width: 215px;
-  background-image: url(/images/styles/shadow.png);
+  width: 168px;
+  margin: 5px 10px;
 }
-/* line 102, ../sass/jcvp/partials/_main.sass */
-div.box div.boxBody div.boxContent {
-  float: left;
-  width: 211px;
-  background-color: white;
-  margin: 0 0 2px 2px;
-  height: 200px;
+/* line 174, ../sass/jcvp/partials/_main.sass */
+div.box div.boxBody a:hover {
+  color: #f07d08;
 }
 
-/* line 109, ../sass/jcvp/partials/_main.sass */
+/* line 177, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 710px;
+  width: 550px;
   margin-right: 0;
+  margin-bottom: 20px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html div.blog-teaser {
   overflow-x: hidden;
 }
-/* line 112, ../sass/jcvp/partials/_main.sass */
+/* line 181, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 710px;
+  width: 550px;
   margin-right: 0;
   margin-bottom: 8px;
 }
@@ -853,37 +976,38 @@ div.blog-teaser div.blog-teaser-title {
 * html div.blog-teaser div.blog-teaser-title {
   overflow-x: hidden;
 }
-/* line 116, ../sass/jcvp/partials/_main.sass */
+/* line 185, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title h1 {
   font-size: 18px;
 }
-/* line 118, ../sass/jcvp/partials/_main.sass */
+/* line 187, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title h1 a, div.blog-teaser div.blog-teaser-title h1 a:visited {
   color: #f07d08;
 }
-/* line 120, ../sass/jcvp/partials/_main.sass */
+/* line 189, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title h1 a:hover {
   text-decoration: underline;
 }
-/* line 122, ../sass/jcvp/partials/_main.sass */
+/* line 191, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-text {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 710px;
+  width: 550px;
   margin-right: 0;
   margin-bottom: 8px;
+  line-height: 18px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html div.blog-teaser div.blog-teaser-text {
   overflow-x: hidden;
 }
-/* line 126, ../sass/jcvp/partials/_main.sass */
+/* line 196, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-info {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 710px;
+  width: 550px;
   margin-right: 0;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */

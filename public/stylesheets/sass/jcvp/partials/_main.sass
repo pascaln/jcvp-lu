@@ -4,32 +4,65 @@ div#main
 div#helpNavigation
   +column(24)
   +backgroundcolor_grey
-  :height 21px
+  :height 27px
+  a#rss
+    div#rss-icon
+      :float left
+      :width 39px
+      :height 27px      
+      :background-image url(/images/styles/icons_sprite.gif)
+      :background-position -416px 113px
+  a#rss:hover
+    div#rss-icon
+      :background-position -416px 47px
+  a#facebook
+    div#facebook-icon
+      :float left
+      :width 39px
+      :height 27px
+      :background-image url(/images/styles/icons_sprite.gif)
+      :background-position -179px 113px
+  a#facebook:hover
+    div#facebook-icon
+      :background-position -179px 47px
+  a#flicker
+    div#flicker-icon
+      :float left
+      :width 39px
+      :height 27px
+      :background-image url(/images/styles/icons_sprite.gif)
+      :background-position -258px 113px
+  a#flicker:hover
+    div#flicker-icon
+      :background-position -258px 47px
 
 div#mainNavigation
   +column(24)
-  :margin-top 60px
+  :margin-top 10px
 
 div#mainNavigationImage
   +column(24)
 
+div.mainNavigationContent div#mainNavigationBar
+  :margin-top -95px
+div.mainNavigationContent div#mainNavigationImage
+  :height 105px
+  
 div#mainNavigationBar
   +column(24)
-  :margin-top -298px
+  :margin-top -340px
   div#mainNavigationBarItems
-    +column(20)
+    +column(18)
     +backgroundcolor_grey
     :opacity 0.8
-    :margin-top 66px
     :margin-right 0
     :height = $mainNavigationBarHeight
     ul
       +horizontal-list
       li
-        :margin-right 20px
-        :width 120px
-        :padding-left 0
-        :padding-right 0
+        :padding-right 20px
+        :padding-left 20px
+        :padding-right 20px
         :text-align center
         a
           :color white
@@ -37,80 +70,116 @@ div#mainNavigationBar
           :height = $mainNavigationBarHeight - 6
           :display block
           :padding-top 6px
-        ul
-          :display none
       li:hover
         +jcvp-backgroundcolor
-        ul
-          :display block
-          :position absolute
-          li
-            :background-color black
-            :width 120px
-            :padding-left 0
-            :padding-right 0
-            :text-align center
-          li:hover
-            +jcvp-backgroundcolor
-
+      li.current, li.parent_of_current
+        +jcvp-backgroundcolor
+      li:first-child
+        :padding-left 20px
+        
   div#mainNavigationBarLogo
-    +column(4)
+    +prepend(1)
+    +column(5)
     +last
+    :margin-left 10px
 
 div#whiteboard
   +column(24)
   :margin-top 20px
   div#leftWhiteboard
-    +column(6)
-    div#2LevelNavigation
-      +column(6)
+    +column(4)
+    :margin-top 4px
+    div#second-Level-Navigation
+      +column(4)
       :margin-buttom 20px
-  div#rightWhiteboard
-    +column(18)
-    +last
-    :background-color #AAAAAA
-    :padding-bottom 2px
+      ul
+        li
+          a:hover
+            :color = $jcvp-orange
+        li.current, li.parent_of_current
+          a 
+            :color = $jcvp-orange
+  div.leftWhiteboard-Blog 
+    div#second-Level-Navigation 
+      ul
+        li
+          :margin-bottom 10px
+  div#centerWhiteboard
+    +prepend(0)
+    +column(15)
+    div#centerWhiteboard-left-right-border
+      +prepend(0)
+      +column(15)
+      :background-image url(/images/styles/content_shadow.png)
     div#contentNavigation
-      +column(18)
+      +column(15)
       +last
-      :height 25px
-      :margin 0 -2px -2px 2px
+      :height 20px
       :color white
+      :background-image url(/images/styles/shadow_top_bottom.png)
+      :padding-top 6px
+      div#content-Navigation-items
+        :margin-left 6px
+        div.contentNavigation-item
+          :float left
+          :line-height 20px
+          :text-align center
+          :margin-right 10px
+          a
+            :color white
+          :padding-left 8px
+          :padding-right 14px
+          :font-weight bold
+        div.contentNavigation-acitve-item-left-corner
+          :float left
+          :line-height 20px
+          :width 5px
+          :background-image url(/images/styles/content_area_tab_bg.gif)
+          :background-position left top
+        div.contentNavigation-acitve-item
+          :background-image url(/images/styles/content_area_tab_bg.gif)
+          :background-position right top
+          :color black
+          a 
+            :color black
     div#content
-      +column(17)
+      +column(14)
       +last
-      :background-color #FFFFFF
-      :margin 0 0 0 2px
+      :margin 10px 20px 0 20px
       :padding-right 36px
-      :min-height 600px
+      :min-height 400px
+    div#centerWhiteboard-bottom-border
+      +column(15)
+      :background-image url(/images/styles/shadow_top_bottom.png)
+      :height 10px
+      :background-position left bottom
+  div#rightWhiteboard
+    +prepend(0)
+    +column(5)
+    +last
+    :margin-top 4px
 
 div.box
   :float left
-  :width 215px
+  :width 184px
   :padding-bottom 2px
   :margin-bottom 20px
-  div.boxTitle
-    :float left
-    :width 215px
-    :height 25px
-    :color white
-    :background-image url(/images/styles/shadow_top_bottom.png)
+  :margin-left 8px
+  :background-image url(/images/styles/bg_box.png)
+  :height 180px
   div.boxBody
     :float left
-    :width 215px
-    :background-image url(/images/styles/shadow.png)
-    div.boxContent
-      :float left
-      :width 211px
-      :background-color #FFFFFF
-      :margin 0 0 2px 2px
-      :height 200px
+    :width 168px
+    :margin 5px 10px
+    a:hover
+      :color = $jcvp-orange
 
 div.blog-teaser
-  +column(18)
+  +column(14)
   +last
+  :margin-bottom 20px
   div.blog-teaser-title
-    +column(18)
+    +column(14)
     +last
     :margin-bottom 8px
     h1
@@ -120,9 +189,10 @@ div.blog-teaser
       a:hover
         :text-decoration underline
   div.blog-teaser-text
-    +column(18)
+    +column(14)
     +last  
     :margin-bottom 8px
+    :line-height 18px
   div.blog-teaser-info
-    +column(18)
+    +column(14)
     +last
