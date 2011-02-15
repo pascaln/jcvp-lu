@@ -5,37 +5,59 @@ div#helpNavigation
   +column(24)
   +backgroundcolor_grey
   :height 27px
-  a#rss
-    div#rss-icon
-      :float left
-      :width 39px
-      :height 27px      
-      :background-image url(/images/styles/icons_sprite.gif)
-      :background-position -416px 113px
-  a#rss:hover
-    div#rss-icon
-      :background-position -416px 47px
-  a#facebook
-    div#facebook-icon
-      :float left
-      :width 39px
-      :height 27px
-      :background-image url(/images/styles/icons_sprite.gif)
-      :background-position -179px 113px
-  a#facebook:hover
-    div#facebook-icon
-      :background-position -179px 47px
-  a#flicker
-    div#flicker-icon
-      :float left
-      :width 39px
-      :height 27px
-      :background-image url(/images/styles/icons_sprite.gif)
-      :background-position -258px 113px
-  a#flicker:hover
-    div#flicker-icon
-      :background-position -258px 47px
-
+  div#web2
+    +column(12)
+    a#rss
+      div#rss-icon
+        :float left
+        :width 39px
+        :height 27px      
+        :background-image url(/images/styles/icons_sprite.gif)
+        :background-position -416px 113px
+    a#rss:hover
+      div#rss-icon
+        :background-position -416px 47px
+    a#facebook
+      div#facebook-icon
+        :float left
+        :width 39px
+        :height 27px
+        :background-image url(/images/styles/icons_sprite.gif)
+        :background-position -179px 113px
+    a#facebook:hover
+      div#facebook-icon
+        :background-position -179px 47px
+    a#flicker
+      div#flicker-icon
+        :float left
+        :width 39px
+        :height 27px
+        :background-image url(/images/styles/icons_sprite.gif)
+        :background-position -258px 113px
+    a#flicker:hover
+      div#flicker-icon
+        :background-position -258px 47px
+  div#helpNavigationItems
+    +column(12)
+    +last
+    a
+      :color white
+    ul
+      +horizontal-list
+      :float right
+      :margin-right 10px
+      :line-height 27px
+      :font-size 12px
+      li.first
+        a:hover
+          :text-decoration underline
+      li.current
+        :text-decoration underline
+        :color white
+      li
+        a:hover
+          :text-decoration underline      
+      
 div#mainNavigation
   +column(24)
   :margin-top 10px
@@ -76,6 +98,8 @@ div#mainNavigationBar
         +jcvp-backgroundcolor
       li:first-child
         :padding-left 20px
+      li:last-child  
+        :padding-right 20px
         
   div#mainNavigationBarLogo
     +prepend(1)
@@ -99,11 +123,16 @@ div#whiteboard
         li.current, li.parent_of_current
           a 
             :color = $jcvp-orange
+      div#main-site-name
+        :font-size 14px
+        :margin-bottom 20px
+                          
   div.leftWhiteboard-Blog 
     div#second-Level-Navigation 
       ul
         li
           :margin-bottom 10px
+        
   div#centerWhiteboard
     +prepend(0)
     +column(15)
@@ -148,11 +177,43 @@ div#whiteboard
       :margin 10px 20px 0 20px
       :padding-right 36px
       :min-height 400px
+      div#addthis
+        :margin-top 20px
+      div#comments
+        :margin-top 20px
+      a:hover
+        :color = $jcvp-orange    
+      div#blog-date
+        +column(14)
+        :margin-top 5px
+        :font-size 10px
+      div#blog-author
+        +column(14)
+        :margin-bottom 20px
+        :margin-top -5px
+      div#blog-content
+        +column(14)
+        :margin-bottom 20px    
+      div#blog-tags
+        +column(14)
+        :margin-bottom 20px        
+       
     div#centerWhiteboard-bottom-border
       +column(15)
       :background-image url(/images/styles/shadow_top_bottom.png)
       :height 10px
       :background-position left bottom
+    div#breadcrumb-list
+      +column(15)
+      :margin-left 5px
+      :font-size 10px
+      ul
+        +horizontal-list
+        li
+          a:hover
+            :color = $jcvp-orange 
+
+        
   div#rightWhiteboard
     +prepend(0)
     +column(5)
@@ -173,6 +234,8 @@ div.box
     :margin 5px 10px
     a:hover
       :color = $jcvp-orange
+    div.boxItem
+      :margin-bottom 10px
 
 div.blog-teaser
   +column(14)
@@ -181,13 +244,30 @@ div.blog-teaser
   div.blog-teaser-title
     +column(14)
     +last
-    :margin-bottom 8px
+    :margin-bottom 5px
     h1
       :font-size 18px
       a, a:visited
         :color = $jcvp-orange
       a:hover
         :text-decoration underline
+  div.blog-teaser-more
+    +column(14)
+    :margin-bottom 20px
+    div.blog-teaser-more-link
+      :float left
+      :width 130px
+      a#blog-teaser-more-link-tag
+        :float left
+        :background-image url(/images/styles/linkBtnMore_bg.png) 
+        :width 110px
+        :background-position right top
+        :color white
+        :padding-left 5px
+      a#blog-teaser-more-link-tag:hover
+        :background-image url(/images/styles/linkBtnMore_bg_hover.png) 
+        :color white
+      
   div.blog-teaser-text
     +column(14)
     +last  
@@ -196,3 +276,26 @@ div.blog-teaser
   div.blog-teaser-info
     +column(14)
     +last
+    
+table.parole
+  :border-bottom 1px solid black
+  :padding-bottom 20px
+  :margin-bottom 20px
+  tr
+    :height 20px
+    td:first-child
+      :width 350px
+      :margin-right 10px
+    td
+      :width 100px
+      :vertical-align top
+
+      
+ul#blog-by-tag
+  :float left
+  :text-decoration none
+  li
+    :margin-bottom 10px
+    :list-style-image none
+    :list-style-type none
+  

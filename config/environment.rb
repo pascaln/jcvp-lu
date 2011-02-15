@@ -81,5 +81,13 @@ Radiant::Initializer.run do |config|
     ActiveSupport::Inflector.inflections do |inflect|
       inflect.uncountable 'config'
     end
-  end
+  end 
 end
+
+ActionMailer::Base.smtp_settings = {
+  :address => "smtp.example.com",
+  :domain => "example.com",
+  :user_name => "noreply@example.com",
+  :password => "supersecret",
+  :authentication => :login
+}
