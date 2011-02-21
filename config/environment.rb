@@ -91,3 +91,5 @@ ActionMailer::Base.smtp_settings = {
   :password => "supersecret",
   :authentication => :login
 }
+
+Radiant::Config['recaptcha.public_key'] = '6LfIxMESAAAAAIfshgTkdteUVVOpmzSwtZG5yDx6'

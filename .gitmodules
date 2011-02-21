@@ -22,9 +22,12 @@
 [submodule "vendor/extensions/tiny_paper"]
 	path = vendor/extensions/tiny_paper
 	url = git://github.com/Aissac/radiant-tiny-paper-extension.git
-[submodule "vendor/extensions/mailer"]
-	path = vendor/extensions/mailer
-	url = git://github.com/radiant/radiant-mailer-extension.git
 [submodule "vendor/extensions/breadcrumb_list"]
 	path = vendor/extensions/breadcrumb_list
 	url = git@github.com:pascaln/radiant-breadcrumb-list-extension.git
+[submodule "vendor/extensions/recaptcha"]
+	path = vendor/extensions/recaptcha
+	url = git://github.com/tekwiz/radiant-recaptcha-extension.git
+[submodule "vendor/extensions/recaptcha_mailer"]
+	path = vendor/extensions/recaptcha_mailer
+	url = git://github.com/tekwiz/radiant-recaptcha-mailer-extension.git
