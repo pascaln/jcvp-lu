@@ -892,12 +892,20 @@ div#whiteboard div#leftWhiteboard div#second-Level-Navigation ul li.current a, d
 div#whiteboard div#leftWhiteboard div#second-Level-Navigation div#main-site-name {
   font-size: 14px;
   margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
 }
-/* line 133, ../sass/jcvp/partials/_main.sass */
+/* line 134, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div.leftWhiteboard-content-site div#second-Level-Navigation div#main-site-name {
+  margin-top: 17px;
+}
+/* line 140, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div.leftWhiteboard-Blog div#second-Level-Navigation ul li {
   margin-bottom: 10px;
 }
-/* line 136, ../sass/jcvp/partials/_main.sass */
+/* line 143, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard {
   padding-left: 0px;
   display: inline;
@@ -909,7 +917,7 @@ div#whiteboard div#centerWhiteboard {
 * html div#whiteboard div#centerWhiteboard {
   overflow-x: hidden;
 }
-/* line 139, ../sass/jcvp/partials/_main.sass */
+/* line 146, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#centerWhiteboard-left-right-border {
   padding-left: 0px;
   display: inline;
@@ -922,7 +930,7 @@ div#whiteboard div#centerWhiteboard div#centerWhiteboard-left-right-border {
 * html div#whiteboard div#centerWhiteboard div#centerWhiteboard-left-right-border {
   overflow-x: hidden;
 }
-/* line 143, ../sass/jcvp/partials/_main.sass */
+/* line 150, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#contentNavigation {
   display: inline;
   float: left;
@@ -938,11 +946,11 @@ div#whiteboard div#centerWhiteboard div#contentNavigation {
 * html div#whiteboard div#centerWhiteboard div#contentNavigation {
   overflow-x: hidden;
 }
-/* line 150, ../sass/jcvp/partials/_main.sass */
+/* line 157, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation-items {
   margin-left: 6px;
 }
-/* line 152, ../sass/jcvp/partials/_main.sass */
+/* line 159, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation-items div.contentNavigation-item {
   float: left;
   line-height: 20px;
@@ -952,11 +960,11 @@ div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation
   padding-right: 14px;
   font-weight: bold;
 }
-/* line 157, ../sass/jcvp/partials/_main.sass */
+/* line 164, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation-items div.contentNavigation-item a {
   color: white;
 }
-/* line 162, ../sass/jcvp/partials/_main.sass */
+/* line 169, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation-items div.contentNavigation-acitve-item-left-corner {
   float: left;
   line-height: 20px;
@@ -964,17 +972,17 @@ div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation
   background-image: url(/images/styles/content_area_tab_bg.gif);
   background-position: left top;
 }
-/* line 168, ../sass/jcvp/partials/_main.sass */
+/* line 175, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation-items div.contentNavigation-acitve-item {
   background-image: url(/images/styles/content_area_tab_bg.gif);
   background-position: right top;
   color: black;
 }
-/* line 172, ../sass/jcvp/partials/_main.sass */
+/* line 179, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#contentNavigation div#content-Navigation-items div.contentNavigation-acitve-item a {
   color: black;
 }
-/* line 174, ../sass/jcvp/partials/_main.sass */
+/* line 181, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#content {
   display: inline;
   float: left;
@@ -989,19 +997,19 @@ div#whiteboard div#centerWhiteboard div#content {
 * html div#whiteboard div#centerWhiteboard div#content {
   overflow-x: hidden;
 }
-/* line 180, ../sass/jcvp/partials/_main.sass */
+/* line 187, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#content div#addthis {
   margin-top: 20px;
 }
-/* line 182, ../sass/jcvp/partials/_main.sass */
+/* line 189, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#content div#comments {
   margin-top: 20px;
 }
-/* line 184, ../sass/jcvp/partials/_main.sass */
+/* line 191, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#content a:hover {
   color: #f07d08;
 }
-/* line 186, ../sass/jcvp/partials/_main.sass */
+/* line 193, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#content div#blog-date {
   display: inline;
   float: left;
@@ -1014,7 +1022,7 @@ div#whiteboard div#centerWhiteboard div#content div#blog-date {
 * html div#whiteboard div#centerWhiteboard div#content div#blog-date {
   overflow-x: hidden;
 }
-/* line 190, ../sass/jcvp/partials/_main.sass */
+/* line 197, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#content div#blog-author {
   display: inline;
   float: left;
@@ -1027,7 +1035,7 @@ div#whiteboard div#centerWhiteboard div#content div#blog-author {
 * html div#whiteboard div#centerWhiteboard div#content div#blog-author {
   overflow-x: hidden;
 }
-/* line 194, ../sass/jcvp/partials/_main.sass */
+/* line 201, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#content div#blog-content {
   display: inline;
   float: left;
@@ -1039,7 +1047,7 @@ div#whiteboard div#centerWhiteboard div#content div#blog-content {
 * html div#whiteboard div#centerWhiteboard div#content div#blog-content {
   overflow-x: hidden;
 }
-/* line 197, ../sass/jcvp/partials/_main.sass */
+/* line 204, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#content div#blog-tags {
   display: inline;
   float: left;
@@ -1051,7 +1059,7 @@ div#whiteboard div#centerWhiteboard div#content div#blog-tags {
 * html div#whiteboard div#centerWhiteboard div#content div#blog-tags {
   overflow-x: hidden;
 }
-/* line 201, ../sass/jcvp/partials/_main.sass */
+/* line 208, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#centerWhiteboard-bottom-border {
   display: inline;
   float: left;
@@ -1065,7 +1073,7 @@ div#whiteboard div#centerWhiteboard div#centerWhiteboard-bottom-border {
 * html div#whiteboard div#centerWhiteboard div#centerWhiteboard-bottom-border {
   overflow-x: hidden;
 }
-/* line 206, ../sass/jcvp/partials/_main.sass */
+/* line 213, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#breadcrumb-list {
   display: inline;
   float: left;
@@ -1073,12 +1081,13 @@ div#whiteboard div#centerWhiteboard div#breadcrumb-list {
   width: 590px;
   margin-left: 5px;
   font-size: 10px;
+  height: 15px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html div#whiteboard div#centerWhiteboard div#breadcrumb-list {
   overflow-x: hidden;
 }
-/* line 210, ../sass/jcvp/partials/_main.sass */
+/* line 218, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#breadcrumb-list ul {
   margin: 0;
   padding: 0;
@@ -1106,11 +1115,11 @@ div#whiteboard div#centerWhiteboard div#breadcrumb-list ul li:first-child, div#w
 div#whiteboard div#centerWhiteboard div#breadcrumb-list ul li:last-child, div#whiteboard div#centerWhiteboard div#breadcrumb-list ul li.last {
   padding-right: 0;
 }
-/* line 213, ../sass/jcvp/partials/_main.sass */
+/* line 221, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#centerWhiteboard div#breadcrumb-list ul li a:hover {
   color: #f07d08;
 }
-/* line 217, ../sass/jcvp/partials/_main.sass */
+/* line 225, ../sass/jcvp/partials/_main.sass */
 div#whiteboard div#rightWhiteboard {
   padding-left: 0px;
   display: inline;
@@ -1118,14 +1127,21 @@ div#whiteboard div#rightWhiteboard {
   margin-right: 10px;
   width: 190px;
   margin-right: 0;
-  margin-top: 4px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html div#whiteboard div#rightWhiteboard {
   overflow-x: hidden;
 }
+/* line 230, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div.rightWhiteboard-content-site {
+  margin-top: 17px;
+}
+/* line 233, ../sass/jcvp/partials/_main.sass */
+div#whiteboard div.rightWhiteboard-home {
+  margin-top: 3px;
+}
 
-/* line 223, ../sass/jcvp/partials/_main.sass */
+/* line 236, ../sass/jcvp/partials/_main.sass */
 div.box {
   float: left;
   width: 184px;
@@ -1135,22 +1151,22 @@ div.box {
   background-image: url(/images/styles/bg_box.png);
   height: 180px;
 }
-/* line 231, ../sass/jcvp/partials/_main.sass */
+/* line 244, ../sass/jcvp/partials/_main.sass */
 div.box div.boxBody {
   float: left;
   width: 168px;
   margin: 5px 10px;
 }
-/* line 235, ../sass/jcvp/partials/_main.sass */
+/* line 248, ../sass/jcvp/partials/_main.sass */
 div.box div.boxBody a:hover {
   color: #f07d08;
 }
-/* line 237, ../sass/jcvp/partials/_main.sass */
+/* line 250, ../sass/jcvp/partials/_main.sass */
 div.box div.boxBody div.boxItem {
   margin-bottom: 10px;
 }
 
-/* line 240, ../sass/jcvp/partials/_main.sass */
+/* line 253, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser {
   display: inline;
   float: left;
@@ -1163,7 +1179,7 @@ div.blog-teaser {
 * html div.blog-teaser {
   overflow-x: hidden;
 }
-/* line 244, ../sass/jcvp/partials/_main.sass */
+/* line 257, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title {
   display: inline;
   float: left;
@@ -1176,19 +1192,19 @@ div.blog-teaser div.blog-teaser-title {
 * html div.blog-teaser div.blog-teaser-title {
   overflow-x: hidden;
 }
-/* line 248, ../sass/jcvp/partials/_main.sass */
+/* line 261, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title h1 {
   font-size: 18px;
 }
-/* line 250, ../sass/jcvp/partials/_main.sass */
+/* line 263, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title h1 a, div.blog-teaser div.blog-teaser-title h1 a:visited {
   color: #f07d08;
 }
-/* line 252, ../sass/jcvp/partials/_main.sass */
+/* line 265, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title h1 a:hover {
   text-decoration: underline;
 }
-/* line 254, ../sass/jcvp/partials/_main.sass */
+/* line 267, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-more {
   display: inline;
   float: left;
@@ -1200,12 +1216,12 @@ div.blog-teaser div.blog-teaser-more {
 * html div.blog-teaser div.blog-teaser-more {
   overflow-x: hidden;
 }
-/* line 257, ../sass/jcvp/partials/_main.sass */
+/* line 270, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-more div.blog-teaser-more-link {
   float: left;
   width: 130px;
 }
-/* line 260, ../sass/jcvp/partials/_main.sass */
+/* line 273, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-more div.blog-teaser-more-link a#blog-teaser-more-link-tag {
   float: left;
   background-image: url(/images/styles/linkBtnMore_bg.png);
@@ -1214,12 +1230,12 @@ div.blog-teaser div.blog-teaser-more div.blog-teaser-more-link a#blog-teaser-mor
   color: white;
   padding-left: 5px;
 }
-/* line 267, ../sass/jcvp/partials/_main.sass */
+/* line 280, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-more div.blog-teaser-more-link a#blog-teaser-more-link-tag:hover {
   background-image: url(/images/styles/linkBtnMore_bg_hover.png);
   color: white;
 }
-/* line 271, ../sass/jcvp/partials/_main.sass */
+/* line 284, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-text {
   display: inline;
   float: left;
@@ -1233,7 +1249,7 @@ div.blog-teaser div.blog-teaser-text {
 * html div.blog-teaser div.blog-teaser-text {
   overflow-x: hidden;
 }
-/* line 276, ../sass/jcvp/partials/_main.sass */
+/* line 289, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-info {
   display: inline;
   float: left;
@@ -1246,33 +1262,33 @@ div.blog-teaser div.blog-teaser-info {
   overflow-x: hidden;
 }
 
-/* line 280, ../sass/jcvp/partials/_main.sass */
+/* line 293, ../sass/jcvp/partials/_main.sass */
 table.parole {
   border-bottom: 1px solid black;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-/* line 284, ../sass/jcvp/partials/_main.sass */
+/* line 297, ../sass/jcvp/partials/_main.sass */
 table.parole tr {
   height: 20px;
 }
-/* line 286, ../sass/jcvp/partials/_main.sass */
+/* line 299, ../sass/jcvp/partials/_main.sass */
 table.parole tr td:first-child {
   width: 350px;
   margin-right: 10px;
 }
-/* line 289, ../sass/jcvp/partials/_main.sass */
+/* line 302, ../sass/jcvp/partials/_main.sass */
 table.parole tr td {
   width: 100px;
   vertical-align: top;
 }
 
-/* line 294, ../sass/jcvp/partials/_main.sass */
+/* line 307, ../sass/jcvp/partials/_main.sass */
 ul#blog-by-tag {
   float: left;
   text-decoration: none;
 }
-/* line 297, ../sass/jcvp/partials/_main.sass */
+/* line 310, ../sass/jcvp/partials/_main.sass */
 ul#blog-by-tag li {
   margin-bottom: 10px;
   list-style-image: none;

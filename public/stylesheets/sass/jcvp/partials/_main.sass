@@ -126,7 +126,14 @@ div#whiteboard
       div#main-site-name
         :font-size 14px
         :margin-bottom 20px
-                          
+        :font-weight bold
+        :line-height 20px
+        :text-transform uppercase
+        :border-bottom 1px solid
+        
+  div.leftWhiteboard-content-site div#second-Level-Navigation div#main-site-name
+    :margin-top 17px
+                             
   div.leftWhiteboard-Blog 
     div#second-Level-Navigation 
       ul
@@ -207,6 +214,7 @@ div#whiteboard
       +column(15)
       :margin-left 5px
       :font-size 10px
+      :height 15px
       ul
         +horizontal-list
         li
@@ -218,7 +226,12 @@ div#whiteboard
     +prepend(0)
     +column(5)
     +last
-    :margin-top 4px
+    
+  div.rightWhiteboard-content-site
+    :margin-top 17px
+
+  div.rightWhiteboard-home
+    :margin-top 3px    
 
 div.box
   :float left
