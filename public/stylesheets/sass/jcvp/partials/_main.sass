@@ -72,11 +72,12 @@ div.mainNavigationContent div#mainNavigationImage
   
 div#mainNavigationBar
   +column(24)
-  :margin-top -340px
+  :margin-top -300px
   div#mainNavigationBarItems
-    +column(18)
-    +backgroundcolor_grey
-    :opacity 0.8
+    +column(17)
+    //+backgroundcolor_grey
+    //:opacity 0.8
+    :background-color black
     :margin-right 0
     :height = $mainNavigationBarHeight
     ul
@@ -102,11 +103,14 @@ div#mainNavigationBar
         :padding-right 20px
         
   div#mainNavigationBarLogo
-    +prepend(1)
+    +prepend(2)
     +column(5)
     +last
     :margin-left 10px
-
+    a
+      +column(5)
+      +last
+      :height 50px
 div#whiteboard
   +column(24)
   :margin-top 20px
@@ -117,7 +121,11 @@ div#whiteboard
       +column(4)
       :margin-buttom 20px
       ul
+        :list-style-type disc
+        :margin-left 13px
         li
+          a
+            :line-height 20px
           a:hover
             :color = $jcvp-orange
         li.current, li.parent_of_current
@@ -183,7 +191,7 @@ div#whiteboard
       +last
       :margin 10px 20px 0 20px
       :padding-right 36px
-      :min-height 400px
+      :min-height 345px
       div#addthis
         :margin-top 20px
       div#comments
@@ -249,7 +257,25 @@ div.box
       :color = $jcvp-orange
     div.boxItem
       :margin-bottom 10px
-
+      :float left
+    div.boxContent
+      :width 168px
+      :float left
+      ol
+        :float left
+        :width 168px
+        a
+          :float left
+    
+div.small-box
+  :float left
+  :width 150px
+  :height 120px
+  :background-image url(/images/styles/bg_box_small.gif)
+  :margin-bottom 13px
+  div.small-box-content
+    :margin 5px 7px
+  
 div.blog-teaser
   +column(14)
   +last
@@ -312,3 +338,20 @@ ul#blog-by-tag
     :list-style-image none
     :list-style-type none
   
+table.agenda
+  td:first-child
+    :width 100px
+  tr
+    :height 18px
+    
+table.jmpuls-editions
+  td:first-child
+    :width 100px   
+    
+table.downloads
+  td:first-child
+    :width 150px    
+    
+table.vorstand
+  td:first-child
+    :width 250px     
