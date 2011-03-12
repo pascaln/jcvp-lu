@@ -167,6 +167,7 @@ module NavigationTags
        html += '<div class="contentNavigation-acitve-item-left-corner">&nbsp;</div>'
        html += "<div class=\"contentNavigation-item contentNavigation-acitve-item\">"
      else
+       html += '<div class="contentNavigation-inactive-item-spacer">&nbsp;</div>'
        html += "<div class=\"contentNavigation-item\">"
      end
      url = (defined?(SiteLanguage)  && SiteLanguage.count > 0) ? "/#{Locale.language.code}#{child.url}" : child.url
