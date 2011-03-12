@@ -597,7 +597,7 @@ div#helpNavigation {
   float: left;
   margin-right: 10px;
   width: 950px;
-  background-color: #707070;
+  background-color: #505050;
   height: 27px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
@@ -1316,59 +1316,66 @@ div.blog-teaser div.blog-teaser-info {
   overflow-x: hidden;
 }
 
-/* line 319, ../sass/jcvp/partials/_main.sass */
+/* line 320, ../sass/jcvp/partials/_main.sass */
+div.content-home h1 {
+  font-size: 19px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 325, ../sass/jcvp/partials/_main.sass */
 table.parole {
   border-bottom: 1px solid black;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-/* line 323, ../sass/jcvp/partials/_main.sass */
+/* line 329, ../sass/jcvp/partials/_main.sass */
 table.parole tr {
   height: 20px;
 }
-/* line 325, ../sass/jcvp/partials/_main.sass */
+/* line 331, ../sass/jcvp/partials/_main.sass */
 table.parole tr td:first-child {
   width: 350px;
   margin-right: 10px;
 }
-/* line 328, ../sass/jcvp/partials/_main.sass */
+/* line 334, ../sass/jcvp/partials/_main.sass */
 table.parole tr td {
   width: 100px;
   vertical-align: top;
 }
 
-/* line 333, ../sass/jcvp/partials/_main.sass */
+/* line 339, ../sass/jcvp/partials/_main.sass */
 ul#blog-by-tag {
   float: left;
   text-decoration: none;
 }
-/* line 336, ../sass/jcvp/partials/_main.sass */
+/* line 342, ../sass/jcvp/partials/_main.sass */
 ul#blog-by-tag li {
   margin-bottom: 10px;
   list-style-image: none;
   list-style-type: none;
 }
 
-/* line 342, ../sass/jcvp/partials/_main.sass */
+/* line 348, ../sass/jcvp/partials/_main.sass */
 table.agenda td:first-child {
   width: 100px;
 }
-/* line 344, ../sass/jcvp/partials/_main.sass */
+/* line 350, ../sass/jcvp/partials/_main.sass */
 table.agenda tr {
   height: 18px;
 }
 
-/* line 348, ../sass/jcvp/partials/_main.sass */
+/* line 354, ../sass/jcvp/partials/_main.sass */
 table.jmpuls-editions td:first-child {
   width: 100px;
 }
 
-/* line 352, ../sass/jcvp/partials/_main.sass */
+/* line 358, ../sass/jcvp/partials/_main.sass */
 table.downloads td:first-child {
   width: 150px;
 }
 
-/* line 356, ../sass/jcvp/partials/_main.sass */
+/* line 362, ../sass/jcvp/partials/_main.sass */
 table.vorstand td:first-child {
   width: 250px;
 }
