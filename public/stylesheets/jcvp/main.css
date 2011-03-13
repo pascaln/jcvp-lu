@@ -1020,7 +1020,6 @@ div#whiteboard div#centerWhiteboard div#content {
   width: 550px;
   margin-right: 0;
   margin: 10px 20px 0 20px;
-  padding-right: 36px;
   min-height: 345px;
 }
 /* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
@@ -1172,6 +1171,41 @@ div#whiteboard div.rightWhiteboard-home {
 }
 
 /* line 246, ../sass/jcvp/partials/_main.sass */
+div#bottom {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  font-size: 10px;
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#bottom {
+  overflow-x: hidden;
+}
+/* line 249, ../sass/jcvp/partials/_main.sass */
+div#bottom div#copyright {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 470px;
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#bottom div#copyright {
+  overflow-x: hidden;
+}
+/* line 251, ../sass/jcvp/partials/_main.sass */
+div#bottom div#i-like {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 138, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html div#bottom div#i-like {
+  overflow-x: hidden;
+}
+
+/* line 254, ../sass/jcvp/partials/_main.sass */
 div.box {
   float: left;
   width: 184px;
@@ -1181,37 +1215,37 @@ div.box {
   background-image: url(/images/styles/bg_box.png);
   height: 180px;
 }
-/* line 254, ../sass/jcvp/partials/_main.sass */
+/* line 262, ../sass/jcvp/partials/_main.sass */
 div.box div.boxBody {
   float: left;
   width: 168px;
   margin: 5px 10px;
 }
-/* line 258, ../sass/jcvp/partials/_main.sass */
+/* line 266, ../sass/jcvp/partials/_main.sass */
 div.box div.boxBody a:hover {
   color: #f07d08;
 }
-/* line 260, ../sass/jcvp/partials/_main.sass */
+/* line 268, ../sass/jcvp/partials/_main.sass */
 div.box div.boxBody div.boxItem {
   margin-bottom: 10px;
   float: left;
 }
-/* line 263, ../sass/jcvp/partials/_main.sass */
+/* line 271, ../sass/jcvp/partials/_main.sass */
 div.box div.boxBody div.boxContent {
   width: 168px;
   float: left;
 }
-/* line 266, ../sass/jcvp/partials/_main.sass */
+/* line 274, ../sass/jcvp/partials/_main.sass */
 div.box div.boxBody div.boxContent ol {
   float: left;
   width: 168px;
 }
-/* line 269, ../sass/jcvp/partials/_main.sass */
+/* line 277, ../sass/jcvp/partials/_main.sass */
 div.box div.boxBody div.boxContent ol a {
   float: left;
 }
 
-/* line 272, ../sass/jcvp/partials/_main.sass */
+/* line 280, ../sass/jcvp/partials/_main.sass */
 div.small-box {
   float: left;
   width: 150px;
@@ -1219,12 +1253,12 @@ div.small-box {
   background-image: url(/images/styles/bg_box_small.gif);
   margin-bottom: 13px;
 }
-/* line 278, ../sass/jcvp/partials/_main.sass */
+/* line 286, ../sass/jcvp/partials/_main.sass */
 div.small-box div.small-box-content {
   margin: 5px 7px;
 }
 
-/* line 281, ../sass/jcvp/partials/_main.sass */
+/* line 289, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser {
   display: inline;
   float: left;
@@ -1237,7 +1271,7 @@ div.blog-teaser {
 * html div.blog-teaser {
   overflow-x: hidden;
 }
-/* line 285, ../sass/jcvp/partials/_main.sass */
+/* line 293, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title {
   display: inline;
   float: left;
@@ -1250,19 +1284,19 @@ div.blog-teaser div.blog-teaser-title {
 * html div.blog-teaser div.blog-teaser-title {
   overflow-x: hidden;
 }
-/* line 289, ../sass/jcvp/partials/_main.sass */
+/* line 297, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title h1 {
   font-size: 18px;
 }
-/* line 291, ../sass/jcvp/partials/_main.sass */
+/* line 299, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title h1 a, div.blog-teaser div.blog-teaser-title h1 a:visited {
   color: #f07d08;
 }
-/* line 293, ../sass/jcvp/partials/_main.sass */
+/* line 301, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title h1 a:hover {
   text-decoration: underline;
 }
-/* line 295, ../sass/jcvp/partials/_main.sass */
+/* line 303, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-more {
   display: inline;
   float: left;
@@ -1274,12 +1308,12 @@ div.blog-teaser div.blog-teaser-more {
 * html div.blog-teaser div.blog-teaser-more {
   overflow-x: hidden;
 }
-/* line 298, ../sass/jcvp/partials/_main.sass */
+/* line 306, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-more div.blog-teaser-more-link {
   float: left;
   width: 130px;
 }
-/* line 301, ../sass/jcvp/partials/_main.sass */
+/* line 309, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-more div.blog-teaser-more-link a#blog-teaser-more-link-tag {
   float: left;
   background-image: url(/images/styles/linkBtnMore_bg.png);
@@ -1288,12 +1322,12 @@ div.blog-teaser div.blog-teaser-more div.blog-teaser-more-link a#blog-teaser-mor
   color: white;
   padding-left: 5px;
 }
-/* line 308, ../sass/jcvp/partials/_main.sass */
+/* line 316, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-more div.blog-teaser-more-link a#blog-teaser-more-link-tag:hover {
   background-image: url(/images/styles/linkBtnMore_bg_hover.png);
   color: white;
 }
-/* line 312, ../sass/jcvp/partials/_main.sass */
+/* line 320, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-text {
   display: inline;
   float: left;
@@ -1307,7 +1341,7 @@ div.blog-teaser div.blog-teaser-text {
 * html div.blog-teaser div.blog-teaser-text {
   overflow-x: hidden;
 }
-/* line 317, ../sass/jcvp/partials/_main.sass */
+/* line 325, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-info {
   display: inline;
   float: left;
@@ -1320,66 +1354,66 @@ div.blog-teaser div.blog-teaser-info {
   overflow-x: hidden;
 }
 
-/* line 322, ../sass/jcvp/partials/_main.sass */
+/* line 330, ../sass/jcvp/partials/_main.sass */
 div.content-home h1 {
   font-size: 19px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* line 327, ../sass/jcvp/partials/_main.sass */
+/* line 335, ../sass/jcvp/partials/_main.sass */
 table.parole {
   border-bottom: 1px solid black;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-/* line 331, ../sass/jcvp/partials/_main.sass */
+/* line 339, ../sass/jcvp/partials/_main.sass */
 table.parole tr {
   height: 20px;
 }
-/* line 333, ../sass/jcvp/partials/_main.sass */
+/* line 341, ../sass/jcvp/partials/_main.sass */
 table.parole tr td:first-child {
   width: 350px;
   margin-right: 10px;
 }
-/* line 336, ../sass/jcvp/partials/_main.sass */
+/* line 344, ../sass/jcvp/partials/_main.sass */
 table.parole tr td {
   width: 100px;
   vertical-align: top;
 }
 
-/* line 341, ../sass/jcvp/partials/_main.sass */
+/* line 349, ../sass/jcvp/partials/_main.sass */
 ul#blog-by-tag {
   float: left;
   text-decoration: none;
 }
-/* line 344, ../sass/jcvp/partials/_main.sass */
+/* line 352, ../sass/jcvp/partials/_main.sass */
 ul#blog-by-tag li {
   margin-bottom: 10px;
   list-style-image: none;
   list-style-type: none;
 }
 
-/* line 350, ../sass/jcvp/partials/_main.sass */
+/* line 358, ../sass/jcvp/partials/_main.sass */
 table.agenda td:first-child {
   width: 100px;
 }
-/* line 352, ../sass/jcvp/partials/_main.sass */
+/* line 360, ../sass/jcvp/partials/_main.sass */
 table.agenda tr {
   height: 18px;
 }
 
-/* line 356, ../sass/jcvp/partials/_main.sass */
+/* line 364, ../sass/jcvp/partials/_main.sass */
 table.jmpuls-editions td:first-child {
   width: 100px;
 }
 
-/* line 360, ../sass/jcvp/partials/_main.sass */
+/* line 368, ../sass/jcvp/partials/_main.sass */
 table.downloads td:first-child {
   width: 150px;
 }
 
-/* line 364, ../sass/jcvp/partials/_main.sass */
+/* line 372, ../sass/jcvp/partials/_main.sass */
 table.vorstand td:first-child {
   width: 250px;
 }
