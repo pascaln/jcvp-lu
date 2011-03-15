@@ -214,6 +214,16 @@ div#whiteboard
       div#blog-tags
         +column(14)
         :margin-bottom 20px        
+      a.blog-teaser-more-link-tag
+        :float left
+        :background-image url(/images/styles/linkBtnMore_bg.png) 
+        :width 110px
+        :background-position right top
+        :color white
+        :padding-left 5px
+      a.blog-teaser-more-link-tag:hover
+        :background-image url(/images/styles/linkBtnMore_bg_hover.png) 
+        :color white
        
     div#centerWhiteboard-bottom-border
       +column(15)
@@ -309,16 +319,7 @@ div.blog-teaser
     div.blog-teaser-more-link
       :float left
       :width 130px
-      a#blog-teaser-more-link-tag
-        :float left
-        :background-image url(/images/styles/linkBtnMore_bg.png) 
-        :width 110px
-        :background-position right top
-        :color white
-        :padding-left 5px
-      a#blog-teaser-more-link-tag:hover
-        :background-image url(/images/styles/linkBtnMore_bg_hover.png) 
-        :color white
+
       
   div.blog-teaser-text
     +column(14)
