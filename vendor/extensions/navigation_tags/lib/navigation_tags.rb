@@ -128,7 +128,7 @@ module NavigationTags
     tree = ""
     unless page == nil
       published_children = page.children.delete_if{|c| c.part("no-map") || !c.published? }
-      sort_tag = tag.attr.delete('sort') || asc
+      sort_tag = tag.attr.delete('sort') || 'asc'
       published_children.reverse! if sort_tag == 'desc'
       for child in page.children
         tree << tag.render('sub-nav', {:page => child, :depth => 0 })
