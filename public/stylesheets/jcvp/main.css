@@ -766,7 +766,7 @@ div#mainNavigationBar div#mainNavigationBarItems {
   float: left;
   margin-right: 10px;
   width: 670px;
-  background-color: black;
+  background-color: #4c4c4e;
   margin-right: 0;
   height: 30px;
 }
@@ -1267,14 +1267,19 @@ div.small-box {
   width: 150px;
   height: 120px;
   background-image: url(/images/styles/bg_box_small.gif);
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 }
 /* line 299, ../sass/jcvp/partials/_main.sass */
 div.small-box div.small-box-content {
   margin: 5px 7px;
 }
 
-/* line 302, ../sass/jcvp/partials/_main.sass */
+/* line 301, ../sass/jcvp/partials/_main.sass */
+div.small-box:first-child {
+  margin-bottom: 13px;
+}
+
+/* line 304, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser {
   display: inline;
   float: left;
@@ -1287,7 +1292,7 @@ div.blog-teaser {
 * html div.blog-teaser {
   overflow-x: hidden;
 }
-/* line 306, ../sass/jcvp/partials/_main.sass */
+/* line 308, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title {
   display: inline;
   float: left;
@@ -1300,19 +1305,19 @@ div.blog-teaser div.blog-teaser-title {
 * html div.blog-teaser div.blog-teaser-title {
   overflow-x: hidden;
 }
-/* line 310, ../sass/jcvp/partials/_main.sass */
+/* line 312, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title h1 {
   font-size: 18px;
 }
-/* line 312, ../sass/jcvp/partials/_main.sass */
+/* line 314, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title h1 a, div.blog-teaser div.blog-teaser-title h1 a:visited {
   color: #f07d08;
 }
-/* line 314, ../sass/jcvp/partials/_main.sass */
+/* line 316, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-title h1 a:hover {
   text-decoration: underline;
 }
-/* line 316, ../sass/jcvp/partials/_main.sass */
+/* line 318, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-more {
   display: inline;
   float: left;
@@ -1324,12 +1329,12 @@ div.blog-teaser div.blog-teaser-more {
 * html div.blog-teaser div.blog-teaser-more {
   overflow-x: hidden;
 }
-/* line 319, ../sass/jcvp/partials/_main.sass */
+/* line 321, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-more div.blog-teaser-more-link {
   float: left;
   width: 130px;
 }
-/* line 324, ../sass/jcvp/partials/_main.sass */
+/* line 326, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-text {
   display: inline;
   float: left;
@@ -1343,7 +1348,7 @@ div.blog-teaser div.blog-teaser-text {
 * html div.blog-teaser div.blog-teaser-text {
   overflow-x: hidden;
 }
-/* line 329, ../sass/jcvp/partials/_main.sass */
+/* line 331, ../sass/jcvp/partials/_main.sass */
 div.blog-teaser div.blog-teaser-info {
   display: inline;
   float: left;
@@ -1356,71 +1361,71 @@ div.blog-teaser div.blog-teaser-info {
   overflow-x: hidden;
 }
 
-/* line 334, ../sass/jcvp/partials/_main.sass */
+/* line 336, ../sass/jcvp/partials/_main.sass */
 div.content-home h1 {
   font-size: 19px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* line 339, ../sass/jcvp/partials/_main.sass */
+/* line 341, ../sass/jcvp/partials/_main.sass */
 table.parole {
   border-bottom: 1px solid black;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-/* line 343, ../sass/jcvp/partials/_main.sass */
+/* line 345, ../sass/jcvp/partials/_main.sass */
 table.parole tr {
   height: 20px;
 }
-/* line 345, ../sass/jcvp/partials/_main.sass */
+/* line 347, ../sass/jcvp/partials/_main.sass */
 table.parole tr td:first-child {
   width: 350px;
   margin-right: 10px;
 }
-/* line 348, ../sass/jcvp/partials/_main.sass */
+/* line 350, ../sass/jcvp/partials/_main.sass */
 table.parole tr td {
   width: 100px;
   vertical-align: top;
 }
 
-/* line 353, ../sass/jcvp/partials/_main.sass */
+/* line 355, ../sass/jcvp/partials/_main.sass */
 ul#blog-by-tag {
   float: left;
   text-decoration: none;
 }
-/* line 356, ../sass/jcvp/partials/_main.sass */
+/* line 358, ../sass/jcvp/partials/_main.sass */
 ul#blog-by-tag li {
   margin-bottom: 10px;
   list-style-image: none;
   list-style-type: none;
 }
 
-/* line 362, ../sass/jcvp/partials/_main.sass */
+/* line 364, ../sass/jcvp/partials/_main.sass */
 table.agenda td:first-child {
   width: 100px;
 }
-/* line 364, ../sass/jcvp/partials/_main.sass */
+/* line 366, ../sass/jcvp/partials/_main.sass */
 table.agenda tr {
   height: 18px;
 }
 
-/* line 368, ../sass/jcvp/partials/_main.sass */
+/* line 370, ../sass/jcvp/partials/_main.sass */
 table.jmpuls-editions td:first-child {
   width: 100px;
 }
 
-/* line 372, ../sass/jcvp/partials/_main.sass */
+/* line 374, ../sass/jcvp/partials/_main.sass */
 table.downloads td:first-child {
   width: 150px;
 }
 
-/* line 376, ../sass/jcvp/partials/_main.sass */
+/* line 378, ../sass/jcvp/partials/_main.sass */
 table.vorstand td:first-child {
   width: 250px;
 }
 
-/* line 380, ../sass/jcvp/partials/_main.sass */
+/* line 382, ../sass/jcvp/partials/_main.sass */
 table.kandidat p {
   margin-right: 10px;
 }
