@@ -37,3 +37,6 @@
 [submodule "vendor/extensions/mail_to"]
 	path = vendor/extensions/mail_to
 	url = git://github.com/yoon/radiant-mail-to-extension.git
+[submodule "public/javascripts/jqt"]
+	path = public/javascripts/jqt
+	url = git://github.com/senchalabs/jQTouch.git
