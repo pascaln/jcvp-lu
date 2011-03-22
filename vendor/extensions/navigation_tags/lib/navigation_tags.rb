@@ -177,7 +177,27 @@ module NavigationTags
     end
     return html
   end
-  
+
+  desc %{
+  Checks if an element is part of given navigation type.
+
+  *Usage:*
+  <r:is_navigationtype name="<navigationtype name>" />
+  }
+  tag 'is_navigationtype' do |tag|
+    tag.expand if checknavigationtype(tag.locals.page, NavigationType.find_by_name(tag.attr['name']).id)
+  end
+
+  desc %{
+  Checks if an element is part of given navigation type.
+
+  *Usage:*
+  <r:is_navigationtype name="<navigationtype name>" />
+  }
+  tag 'unless_navigationtype' do |tag|
+    tag.expand unless checknavigationtype(tag.locals.page, NavigationType.find_by_name(tag.attr['name']).id)
+  end
+      
   # Inspired by this thread:
   # http://www.mail-archive.com/radiant@lists.radiantcms.org/msg03234.html
   # Author: Marty Haught
